@@ -1,0 +1,173 @@
+var CG = new(function () {
+  var self = this;
+  // INJECT CONST HERE
+  var timestamp = '2019-11-25T19:27:11+00:00';
+  var host = 'https://io.clickguard.com:443';
+  var server = 'cHJvdGVjdG9y';
+  var customer_id = 'je8TmfGv';
+
+  function getQueryValue (key) {
+    var query = window.location.search.substring(1);
+    var vars = query.split("&");
+    var value = null;
+    vars.forEach(function (v) {
+      var pair = v.split("=");
+      if (pair[0] === key) value = pair[1]
+    })
+    return value;
+  }
+
+  function getDevice () {
+    var key = 'cg_did';
+    var device = window.localStorage.getItem(key)
+    if (device) return device;
+    device = btoa((Math.random() + '').substring(2));
+    window.localStorage.setItem(key, device);
+    return device;
+  }
+
+  function getGclid () {
+    var key = 'cg_gclid';
+    var gclid = getQueryValue('gclid');
+    if (gclid) {
+      window.sessionStorage.setItem(key, gclid);
+      return gclid;
+    }
+    gclid = window.sessionStorage.getItem(key);
+    return gclid
+  }
+  
+  function getSession () {
+    var key = 'cg_sid';
+    var session = window.sessionStorage.getItem(key);
+    if (session) return session
+    session = btoa(new Date().getTime());
+    window.sessionStorage.setItem(key, session);
+    return session;
+  }
+
+  function getMetrics (metrics) {
+    var key = 'cg_met';
+    var metrics = window.sessionStorage.getItem(key);
+    if (metrics) return JSON.parse(metrics);
+    metrics = {
+      gclid: self.gclid,
+      ca: 0, // active clicks
+      cp: 0, // passive clicks
+      ms: 0, // mouse scrolls
+      ic: 0, // input changes
+      if: 0, // input focus
+      ib: 0, // input blur
+      fs: 0, // form submit
+      cc: 0, // content copied
+      pv: 0  // page views
+    };
+    flushMetrics();
+    return metrics;
+  }
+
+  function flushMetrics () {
+    var key = 'cg_met';
+    window.sessionStorage.setItem(key, JSON.stringify(self.metrics));
+  }
+
+  function registerMetrics () {
+    self.metrics = getMetrics();
+    self.metrics.pv += 1;
+    document.addEventListener('scroll', function (e) {
+      self.metrics.ms += 1;
+    });
+    document.addEventListener('click', function (e) {
+      if (['a', 'input', 'button'].includes(e.target.tagName.toLowerCase())) {
+        self.metrics.ca += 1;
+        flushMetrics();
+      } else {
+        self.metrics.cp += 1;
+      }
+    });
+    document.querySelectorAll('form').forEach(function (form) {
+      form.addEventListener('submit', function (e) {
+        self.metrics.fs += 1;
+        flushMetrics();
+      });
+    });
+    document.querySelectorAll('input').forEach(function (input) {
+      input.addEventListener('change', function (e) {
+        self.metrics.ic += 1;
+      });
+      input.addEventListener('focus', function (e) {
+        self.metrics.if += 1;
+      });
+      input.addEventListener('blur', function (e) {
+        self.metrics.ib += 1;
+      });
+    });
+    document.addEventListener('copy', (e) => {
+      self.metrics.cc += 1;
+    });
+  }
+
+  function showWarning (resp) {
+    if (!resp || !resp.warning) return;
+    var el = document.createElement('div');
+    el.innerHTML = resp.warning;
+    document.body.insertBefore(el, document.body.lastChild);
+    setTimeout(function(){
+      var cw = document.querySelector('#clickguard_warning');
+      if (cw) cw.style.display = 'none';
+    }, 15000);
+  }
+
+  function doReport (call, data, cb) {
+    var x = new XMLHttpRequest(); x.open("POST", [host, call, server, customer_id].join('/'), true); 
+    x.setRequestHeader("Content-Type", "application/json;charset=UTF-8"); 
+    x.send(JSON.stringify(data));
+    if (cb) {
+      x.onreadystatechange = function () {
+        if(this.readyState == XMLHttpRequest.DONE) {
+          cb(this.responseText && JSON.parse(this.responseText));
+        }
+      };
+    }
+  }
+
+  self.device = getDevice();
+  self.session = getSession();
+  self.gclid = getGclid();
+
+  function reportOnLoad () {
+    var data = { t: timestamp, s: self.session, gclid: self.gclid, d: self.device, u: window.location.href, r: decodeURI(document.referrer), ss: new Date().getTime() };
+    doReport('r', data);
+  }
+
+  function reportConversion (message, value) {
+    var data = { m: message, v: value, session_id: self.session };
+    doReport('c', data);
+  }
+
+  function reportOnTime () {
+    flushMetrics();
+    doReport('u', self.metrics, showWarning);
+    self.timeout = self.timeout + 1000;
+    setTimeout(reportOnTime, self.timeout);
+  }
+
+  if (window.requestIdleCallback) {
+    requestIdleCallback(reportOnLoad);
+  } else {
+    setTimeout(reportOnLoad, 200);
+  }
+
+  if (self.gclid) {
+    registerMetrics();
+    self.timeout = 1000;
+    setTimeout(reportOnTime, self.timeout);
+  }
+
+  return {
+    reportConversion: reportConversion
+  }
+})();
+
+// legacy compatibility
+window._cg_convert = CG.reportConversion
