@@ -1,0 +1,266 @@
+
+.swiper-container-testimonials{
+    /*margin: auto 5%;*/
+}
+@media only screen and (max-width: 1400px) {
+    .swiper-container-testimonials{
+        /*margin: auto 0%;*/
+    }
+}
+
+.testimonials-accordion .swiper-slide{
+    background: #fff;
+    border:1px solid #ccc;
+    box-sizing: border-box;
+    cursor: default;
+    display: flex;
+    flex-wrap: wrap;
+    /*min-height:350px;*/
+    /*overflow: hidden;*/
+    /*padding:10px 0 10px 10px;*/
+    padding:10px;
+    /*width: 95%;*/
+    /*margin: 10px auto;*/
+    webkit-box-shadow: 1px 1px 5px 1px #b8c0d0;
+    box-shadow: 1px 1px 5px 1px #b8c0d0;
+}
+@media only screen and (min-width: 375px) {
+    .swiper-slide {
+        /*width: 83%;*/
+    }
+}
+@media only screen and (min-width: 440px) {
+    .swiper-slide {
+        /*width: 70%;*/
+    }
+}
+
+.testimonials-accordion__headshot, .testimonials-accordion__info{
+    width:50%;
+}
+.testimonials-accordion__info{
+    display: flex;
+    align-self: center;
+    flex-direction: column;
+    padding-left:10px;
+}
+.testimonials-accordion__headshot{
+    height:120px;
+    width:120px;
+}
+.testimonials-accordion__stars{
+    display: flex;
+    flex-wrap: nowrap;
+}
+.testimonials-accordion__stars img{
+    margin-right: 3px;
+    max-width: 22px;
+    width: 20%;
+}
+.swiper-slide-prev{
+    /*bottom: 0px;*/
+    /*left: 0px;*/
+}
+.swiper-slide-active{
+    bottom: 0px;
+    left: 0px;
+    -webkit-transition: all 0.5s;
+    -moz-transition: all 0.5s;
+    -ms-transition: all 0.5s;
+    -o-transition: all 0.5s;
+    transition: all 0.5s;
+}
+.swiper-slide-next{
+    /*-webkit-box-shadow: 0px 0px 15px 0px rgba(0,0,0,0.4);*/
+    /*-moz-box-shadow: 0px 0px 15px 0px rgba(0,0,0,0.4);*/
+    /*box-shadow: 0px 0px 15px 0px rgba(0,0,0,0.4);*/
+    /*bottom: 10px;*/
+    /*left: -20px;*/
+}
+.attorneys-slider .container-fluid{
+    max-width: unset;
+}
+.attorneys-slider{
+    background: rgb(255,255,255); /* Old browsers */
+    background: -moz-linear-gradient(top,  rgba(255,255,255,1) 0%, rgba(196,207,219,1) 100%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(top,  rgba(255,255,255,1) 0%,rgba(196,207,219,1) 100%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to bottom,  rgba(255,255,255,1) 0%,rgba(196,207,219,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#c4cfdb',GradientType=0 ); /* IE6-9 */
+    padding-top: 50px;
+}
+.attorneys-slider .carousel-caption{
+    position: static;
+    background: #fff;
+    color: #000;
+}
+.attorneys-slider .swiper-slide{
+    height: 395px;
+}
+.attorneys-slider img{
+    /*height:289px;*/
+}
+.attorneys-slider button{
+    background-color: #ed1c24;
+    color: #fff;
+    padding: 10px;
+    font-size: 16px;
+    border-radius: 0;
+    border: unset;
+}
+
+.attorneys-slider__bottom{
+    background: #fff;
+    padding-bottom: 20px;
+}
+
+.attorneys-slider .carousel-caption{
+    color: #0c1c42;
+    width: 100%;
+}
+.attorneys-slider .carousel-caption h3{
+    font-size: 18px;
+    text-transform: uppercase
+}
+.attorneys-slider .carousel-caption p {
+    font-size: 14px;
+}
+
+.attorneys-slider .swiper-slide:after {
+    content : "";
+    position: absolute;
+    right    : 0;
+    z-index: 100;
+    top  : 10%;
+    width  : 1px;
+    height   : 50%;
+    background: #fff;
+}
+.attorneys-slider .swiper-slide:last-child:after {
+    width  : 0px;
+}
+/*.swiper-button-next, .swiper-button-prev{
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    background: #ed1c24;
+    border-radius: 50%;
+    height:80px;
+    width: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+}*/
+.testimonials-accordion{
+    background: #c4cfdb;
+    padding-top: 10px;
+}
+@media only screen and (min-width: 768px) {
+    .testimonials-accordion{
+        padding-top: 50px;
+    }
+}
+.testimonials-accordion__name{
+    color: #0073bb;
+    font-weight: bold;
+}
+.testimonials-accordion__location, .testimonials-accordion__date{
+    font-weight: 600;
+}
+.testimonials-accordion .swiper-wrapper{
+    /*top:30px;*/
+    padding-bottom: 30px;
+}
+.testimonials-accordion__review-container{
+    align-self: flex-start;
+    color:#0c1c42;
+    display: block;
+    margin-right: 0;
+    overflow: hidden;
+    width: 100%;
+}
+.testimonials-accordion__review{
+    display: block;
+    font-size: 15px;
+    /*max-height:224px;*/
+    overflow: hidden;
+}
+.testimonials-accordion__upper-container{
+    display: flex;
+    height: 120px;
+    width: 100%;
+}
+@media only screen and (max-width: 374px) {
+    .testimonials-accordion__headshot {
+        width: 40%;
+    }
+    .testimonials-accordion__review{
+        margin-top:0;
+    }
+}
+
+@media only screen and (max-width: 599px) {
+    .swiper-container-testimonials{
+        /*margin: auto 0 auto 15px;*/
+    }
+    .swiper-slide-active .testimonials-accordion__review{
+        margin-right:14%;
+    }
+    .testimonials-accordion .swiper-slide-next {
+        left:-20%;
+        bottom: 15px;
+        -webkit-transition: all 0.5s;
+        -moz-transition: all 0.5s;
+        -ms-transition: all 0.5s;
+        -o-transition: all 0.5s;
+        transition: all 0.5s;
+        -webkit-box-shadow: -3px 3px 15px -4px rgba(0,0,0,0.8);
+        box-shadow: -3px 3px 15px -4px rgba(0,0,0,0.8);
+    }
+    .testimonials-accordion__review{
+        /*max-height: 224px;*/
+    }
+    .attorneys-slider .swiper-button-next, .attorneys-slider .swiper-button-prev, .swiper-scrollbar{
+        display: none;
+    }
+    .attorneys-slider .swiper-slide:after {
+        width: 0;
+    }
+}
+@media only screen and (min-width: 600px) and (max-width: 1199px) {
+    .testimonials-accordion .swiper-slide{
+        /*height:300px;*/
+    }
+    .testimonials-accordion .swiper-slide-next {
+        left:0;
+        bottom: 0;
+    }
+    .testimonials-accordion__review{
+        /*max-height: 131px;*/
+    }
+    .swiper-container-testimonials{
+        /*margin: auto 15px;*/
+    }
+    .testimonials-accordion .swiper-slide{
+        min-height:unset;
+    }
+}
+
+.swiper-container.swiper-container-testimonials .col-sm-12.col-md-6{
+    margin-bottom: 6px;
+    margin-top: 6px;
+}
+@media only screen and (min-width: 768px) {
+    .swiper-container.swiper-container-testimonials .col-sm-12.col-md-6{
+        margin-bottom: 15px;
+        margin-top: 15px;
+    }
+}
+
+.wlf-form{
+    background: #fff;
+    color:#0c1c42;
+}
+
+.gform_wrapper .gform_footer{
+    text-align: center;
+}
