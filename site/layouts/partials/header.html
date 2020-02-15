@@ -3,27 +3,55 @@
 <!-- Header Start -->
 <div class="header__wrap">
   <div class="container-fluid u-remove-all-padding">
-    <div class="header">
+
+    <!-- mobile header -->
+    <div class="mobile header d-md-none">
       <section class="section-header-logo">
         <picture>
-          <source data-srcset="{{ .Site.BaseURL }}img/wlf-logo.webp" type="image/webp" class="img-fluid">
-          <source data-srcset="{{ .Site.BaseURL }}img/wlf-logo.png" type="image/png" class="img-fluid">
-          <img data-srcset="{{ .Site.BaseURL }}img/wlf-logo.png" src="{{ .Site.BaseURL }}img/wlf-logo.png" class="img-fluid" alt="Wilshire Law Firm logo">
+          <source data-srcset="{{ .Site.BaseURL }}img/WLF_96px-03.webp" type="image/webp" class="img-fluid">
+          <source data-srcset="{{ .Site.BaseURL }}img/WLF_96px-03.png" type="image/png" class="img-fluid">
+          <img data-srcset="{{ .Site.BaseURL }}img/WLF_96px-03.png" src="{{ .Site.BaseURL }}img/WLF_96px-03.png" class="img-fluid" alt="Wilshire Law Firm logo">
         </picture>
       </section>
-      <a class="subhero__phone-num d-sm-flex d-md-none capPhone" href="tel:8553350244" onclick="dataLayer.push({'event':'Contact', 'eventAction':'Call', 'eventNumber': 'Header Mobile Call- 8555969347'});" style="color: #fff; margin-bottom: 10px;">
-        <i class="fa fa-phone-volume" style="color: #55d600;"></i>855-335-0244
-      </a>
-      <section class="hablamos24">
-        <div class="hablamos24__wrap capPhone">
-          <div class="hablamos24__block1 ">HABLAMOS ESPANOL</div>
-          <div class="hablamos24__block2">AVAILABLE 24/7</div>
-        </div>
-      </section>
-      <section class="freeconsult d-none d-md-flex">
-        <i class="fa fa-phone-volume" style="color: #55d600;"></i>
-        <span class="freeconsult__phonenum" style="color:#fff;">1-855-335-0244</span>
-      </section>
+      <div class="section-header-right">
+        <a class="subhero__phone-num d-sm-block d-md-none capPhone" href="tel:<?=$default_phone?>" onclick="dataLayer.push({'event':'Contact', 'eventAction':'Call', 'eventNumber': 'Header Mobile Call- <?=$default_phone?>'});" style="  background: #0c1c42; color: #fff;">
+          <span>1.800.522.7274</span>
+        </a>
+        <img src="<?php echo get_stylesheet_directory_uri(); ?>/homepage-2019/assets/images/lp19v3/header_divider.png" data-src="<?php echo get_stylesheet_directory_uri(); ?>/homepage-2019/assets/images/lp19v3/header_divider.png" class="img-fluid" alt="">
+        <section class="hablamos24" style="width:100%;">
+          <div class="hablamos24__wrap capPhone" style="width: 100%;">
+            <span><?=$hablamos24__block1?> &#8226; <?=$hablamos24__block2?></span>
+          </div>
+        </section>
+      </div>
+      <!-- LOCATION KEYWORD -->
+      <div class="header__subheading">
+        <span class="header__subheading1 <?=$loc_lang?>">&mdash; #<span class="header__subheading1_1">1</span> <span class="header__subheading1_2 <?=$loc_lang?>"><?=$loc_injury_lawyers?> &mdash;</span></span>
+        <span class="header__subheading2"><?=$loc_in?> <?=$loc;?></span>
+      </div>
+      <!-- End LOCATION KEYWORD -->
     </div>
+
+    <!--tablet header -->
+    <div class="tablet header d-none d-md-flex">
+      <picture>
+        <source data-srcset="{{ .Site.BaseURL }}img/WLF_96px-03.webp" type="image/webp" class="img-fluid">
+        <source data-srcset="{{ .Site.BaseURL }}img/WLF_96px-03.png" type="image/png" class="img-fluid">
+        <img data-srcset="{{ .Site.BaseURL }}img/WLF_96px-03.png" src="{{ .Site.BaseURL }}img/WLF_96px-03.png" class="img-fluid" alt="Wilshire Law Firm logo">
+      </picture>
+      <a class="header__phonenum capPhone" href="tel:<?=$default_phone?>" onclick="dataLayer.push({'event':'Contact', 'eventAction':'Call', 'eventNumber': 'Header Mobile Call- <?=$default_phone?>'});" style="  background: #0c1c42; color: #fff;">
+        <span>1.<?=$formatted_number?></span>
+      </a>
+      <div class="hablamos-24 header__text1">
+        <?=$hablamos24__block1?><br />
+        <?=$hablamos24__block2?>
+      </div>
+      <div class="header__chatwidget header__text1">
+        <img src="<?php echo get_stylesheet_directory_uri(); ?>/homepage-2019/assets/images/lp19v3/Chat_Widget.svg" data-src="<?php echo get_stylesheet_directory_uri(); ?>/homepage-2019/assets/images/lp19v3/Chat_Widget.svg" class="img-fluid" alt="">
+        <div>CHAT<br />WITH US</div>
+      </div>
+    </div>
+
   </div>
-</div><!-- header close -->
+</div>
+<!-- header close -->
