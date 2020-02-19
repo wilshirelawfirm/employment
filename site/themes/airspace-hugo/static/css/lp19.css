@@ -36,7 +36,8 @@ h1 {
 }
 
 h2 {
-    color: #04306c
+    color: #04306c;
+    font-size: 1.4rem;
 }
 
 header {
@@ -537,7 +538,6 @@ section.capabilities h2 {
     color: #3c4e66;
     text-transform: uppercase;
     text-align: center;
-    font-size: 1.4rem
 }
 
 @media only screen and (min-width:768px) {
@@ -940,9 +940,6 @@ section.copyright {
     }
     .settlement-detail.spacer {
         display: none
-    }
-    h2 {
-        font-size: 1.5rem
     }
     #pa_badge {
         float: none;
