@@ -14,22 +14,16 @@
         </picture>
       </section>
       <div class="section-header-right">
-        <a class="subhero__phone-num d-sm-block d-md-none capPhone" href="tel:<?=$default_phone?>" onclick="dataLayer.push({'event':'Contact', 'eventAction':'Call', 'eventNumber': 'Header Mobile Call- <?=$default_phone?>'});" style="  background: #0c1c42; color: #fff;">
+        <a class="subhero__phone-num d-sm-block d-md-none capPhone" href="tel:<?=$default_phone?>" onclick="dataLayer.push({'event':'Contact', 'eventAction':'Call', 'eventNumber': 'Header Mobile Call- <?=$default_phone?>'});">
           <span>1.800.522.7274</span>
         </a>
-        <img src="<?php echo get_stylesheet_directory_uri(); ?>/homepage-2019/assets/images/lp19v3/header_divider.png" data-src="<?php echo get_stylesheet_directory_uri(); ?>/homepage-2019/assets/images/lp19v3/header_divider.png" class="img-fluid" alt="">
+        <img src="{{ .Site.BaseURL }}img/header_divider.png" data-src="<?php echo get_stylesheet_directory_uri(); ?>/homepage-2019/assets/images/lp19v3/header_divider.png" class="img-fluid" alt="">
         <section class="hablamos24" style="width:100%;">
           <div class="hablamos24__wrap capPhone" style="width: 100%;">
-            <span><?=$hablamos24__block1?> &#8226; <?=$hablamos24__block2?></span>
+            <span>HABLAMOS ESPANOL &#8226; AVAILABLE 24/7</span>
           </div>
         </section>
       </div>
-      <!-- LOCATION KEYWORD -->
-      <div class="header__subheading">
-        <span class="header__subheading1 <?=$loc_lang?>">&mdash; #<span class="header__subheading1_1">1</span> <span class="header__subheading1_2 <?=$loc_lang?>"><?=$loc_injury_lawyers?> &mdash;</span></span>
-        <span class="header__subheading2"><?=$loc_in?> <?=$loc;?></span>
-      </div>
-      <!-- End LOCATION KEYWORD -->
     </div>
 
     <!--tablet header -->
@@ -39,7 +33,7 @@
         <source data-srcset="{{ .Site.BaseURL }}img/WLF_96px-03.png" type="image/png" class="img-fluid">
         <img data-srcset="{{ .Site.BaseURL }}img/WLF_96px-03.png" src="{{ .Site.BaseURL }}img/WLF_96px-03.png" class="img-fluid" alt="Wilshire Law Firm logo">
       </picture>
-      <a class="header__phonenum capPhone" href="tel:<?=$default_phone?>" onclick="dataLayer.push({'event':'Contact', 'eventAction':'Call', 'eventNumber': 'Header Mobile Call- <?=$default_phone?>'});" style="  background: #0c1c42; color: #fff;">
+      <a class="header__phonenum capPhone" href="tel:<?=$default_phone?>" onclick="dataLayer.push({'event':'Contact', 'eventAction':'Call', 'eventNumber': 'Header Mobile Call- <?=$default_phone?>'});">
         <span>1.<?=$formatted_number?></span>
       </a>
       <div class="hablamos-24 header__text1">

@@ -510,15 +510,13 @@ ul {
 }
 
 section.capabilities {
-    background: #0a214b;
     margin: 0 auto;
-    padding: 50px
 }
 
 section.capabilities h2 {
     display: block;
     margin: 5% auto 0 auto;
-    color: #fff;
+    color: #3c4e66;
     text-transform: uppercase;
     text-align: center;
     font-size: 1.4rem
@@ -1262,9 +1260,6 @@ section.copyright {
     }
     .navbar-dark .navbar-nav .nav-link {
         color: #04306c
-    }
-    .what-we-can-do-container {
-        justify-content: left
     }
     .practice-areas {
         padding: 0

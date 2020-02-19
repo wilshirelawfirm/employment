@@ -50,6 +50,7 @@
 <script src="{{ .Site.BaseURL }}js/bootstrap-formhelpers.min.js"></script>
 <script src="{{ .Site.BaseURL }}js/validate.min.js" ></script>
 <script src="{{ .Site.BaseURL }}js/underscore-min.js"></script>
+<script src="{{ .Site.BaseURL }}js/modernizr-custom.js"></script>
 <script>
   (function(i,n,v,o,c,a) { i.InvocaTagId = o; var s = n.createElement('script'); s.type = 'text/javascript';
     s.async = true; s.src = ('https:' === n.location.protocol ? 'https://' : 'http://' ) + v;
@@ -66,6 +67,13 @@
     $(".subhero__recovered-text1").bigtext();
     $(".headline__big-text").css('opacity', '1');
     $(".headline__big-text2").css('opacity', '1');
+
+    $(".hablamos24__wrap").bigtext();
+
+    $(".herolower__text").bigtext();
+    $(".header__wrap .subhero__phone-num").bigtext();
+    $(".section-header-right").css('visibility', 'visible');
+
 
     document.getElementById('pageurl').value = window.location.href;
     document.getElementById('pageurl-bottom').value = window.location.href;
