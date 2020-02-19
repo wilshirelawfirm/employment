@@ -4,7 +4,7 @@ html {
 
 body {
     font-family: 'Open Sans', sans-serif;
-    color: #04306c;
+    color: #3c4e66;
     background: #fff;
     margin: 0 auto;
     width: 100%
@@ -15,6 +15,16 @@ h1 {
     color: #0c1c42;
     font-size: 40px;
     line-height: 40px
+}
+
+.font-weight-regular{
+    font-weight: 400;
+}
+.font-weight-semi{
+    font-weight: 600;
+}
+.font-weight-bold{
+    font-weight: 700;
 }
 
 h2 {
@@ -533,7 +543,7 @@ section.capabilities h2 {
     flex-direction: row;
     flex-wrap: wrap;
     margin: 0 auto;
-    justify-content: center
+    justify-content: center;
 }
 
 .speciality .capability {

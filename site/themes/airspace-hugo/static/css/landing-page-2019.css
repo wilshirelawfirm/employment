@@ -1,13 +1,122 @@
+@charset "UTF-8";
 @font-face {
-    font-family: 'practice_area_icons';
-    src: url('../fonts/practice_area_icons.eot');
-    src: url('../fonts/practice_area_icons.eot?#iefix') format('embedded-opentype'),
-    url('../fonts/practice_area_icons.woff') format('woff'),
-    url('../fonts/practice_area_icons.ttf') format('truetype'),
-    url('../fonts/practice_area_icons.svg#practice_area_icons') format('svg');
+    font-family: 'wlf';
+    src: url('../fonts/wlf/wlf.eot');
+    src: url('../fonts/wlf/wlf.eot?#iefix') format('embedded-opentype'),
+    url('../fonts/wlf/wlf.woff') format('woff'),
+    url('../fonts/wlf/wlf.ttf') format('truetype'),
+    url('../fonts/wlf/wlf.svg#wlf') format('svg');
     font-weight: normal;
     font-style: normal;
 }
+
+[data-icon]:before {
+    font-family: "wlf" !important;
+    content: attr(data-icon);
+    font-style: normal !important;
+    font-weight: normal !important;
+    font-variant: normal !important;
+    text-transform: none !important;
+    speak: none;
+    line-height: 1;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+
+[class^="icon-"]:before,
+[class*=" icon-"]:before {
+    font-family: "wlf" !important;
+    font-style: normal !important;
+    font-weight: normal !important;
+    font-variant: normal !important;
+    text-transform: none !important;
+    speak: none;
+    line-height: 1;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    font-size: 20vw;
+}
+@media only screen and (min-width:414px) {
+    [class*=" icon-"]:before {
+        font-size: 82.8px;
+    }
+}
+.icon-abc-black:before {
+    content: "\61";
+}
+.icon-calendar:before {
+    content: "\62";
+}
+.icon-car-repair:before {
+    content: "\63";
+}
+.icon-med-specialists:before {
+    content: "\64";
+}
+.icon-med-transport:before {
+    content: "\65";
+}
+.icon-telemundo:before {
+    content: "\66";
+}
+.icon-tvazteca:before {
+    content: "\67";
+}
+.icon-cash-advance:before {
+    content: "\68";
+}
+.icon-cnbc:before {
+    content: "\69";
+}
+.icon-univision:before {
+    content: "\6a";
+}
+.icon-come2you:before {
+    content: "\6b";
+}
+.icon-wlf-long-black:before {
+    content: "\6c";
+}
+.icon-wlf-shield-black:before {
+    content: "\6d";
+}
+.icon-fox:before {
+    content: "\6e";
+}
+.icon-justice:before {
+    content: "\6f";
+}
+.icon-ktla5:before {
+    content: "\70";
+}
+.icon-latimes:before {
+    content: "\71";
+}
+.icon-lost-wages:before {
+    content: "\72";
+}
+.icon-max-compensation:before {
+    content: "\73";
+}
+.icon-med-bills:before {
+    content: "\74";
+}
+.icon-privacy:before {
+    content: "\75";
+}
+.icon-tap2call:before {
+    content: "\76";
+    font-size: 11vw;
+}
+
+@media only screen and (min-width:414px) {
+    .icon-tap2call:before {
+        font-size: 45.54px;
+    }
+}
+
+
 .container1 {
     padding: 20px 0;
     margin: auto;
@@ -421,12 +530,13 @@ p.subhero__no-win-desktop-no-win-text {
 }
 
 .recovered {
-    background: #fff;
-    padding: 10px;
+    background: #3c4e66;
+    color: #fff;
     align-items: center;
     display: -webkit-flex;
     display: flex;
     justify-content: center;
+    padding: 8px;
 }
 
 .recovered__container,
@@ -435,12 +545,9 @@ p.subhero__no-win-desktop-no-win-text {
     line-height: 1;
     margin: 0 auto;
     text-align: center;
-    width: 100%
+    width: 100%;
 }
 
-.recovered__container {
-    color: #0c1c42
-}
 
 .practice-areas__container ul {
     padding: 0 20px
@@ -1028,24 +1135,22 @@ a.card-header--inactive {
     color: #fff;
     font-weight: 700;
     width: 100%;
-    display: block;
-    font-size: 9vmin !important;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     border-radius: 0;
     text-decoration: none !important;
-    padding-bottom: 22px;
-    padding-top: 22px;
+    padding-bottom: 0;
+    padding-top: 0;
     text-shadow: 2px 2px 5px #292929 !important;
     -webkit-box-shadow: 0 2px 10px 0 #050505;
     box-shadow: 0 2px 10px 0 #050505;
-    background: #29a718;
-    background: -moz-linear-gradient(top, rgba(41, 167, 24, 1) 0, rgba(6, 84, 10, 1) 100%);
-    background: -webkit-linear-gradient(top, rgba(41, 167, 24, 1) 0, rgba(6, 84, 10, 1) 100%);
-    background: linear-gradient(to bottom, rgba(41, 167, 24, 1) 0, rgba(6, 84, 10, 1) 100%);
-    filter: progid: DXImageTransform.Microsoft.gradient(startColorstr='#29a718', endColorstr='#06540a', GradientType=0);
+    background: #f16824;
     position: fixed;
     bottom: 0;
     left: 0;
-    z-index: 9999
+    z-index: 9999;
+    height: 18vw;
 }
 
 a.mobile-call-btn:visited,
@@ -1062,6 +1167,20 @@ a.mobile-call-btn:active {
 @media screen and (min-width:768px) {
     #mobile-pop-container {
         display: none
+    }
+}
+
+.tap-to-call-text{
+    font-size: 8vw;
+    margin-left: 10px;
+}
+
+@media screen and (min-width:414px) {
+    .mobile-call-btn{
+        height: 74.5156px;
+    }
+    .tap-to-call-text{
+        font-size: 33.12px;;
     }
 }
 
@@ -1180,32 +1299,29 @@ img {
     bottom: 0
 }
 
-.mobile-call-btn {
-    padding-bottom: 16px;
-    padding-top: 16px
-}
-
 .container.awards {
     padding: 20px 0
 }
 
-section.capabilities {
-    padding: 10px 50px
-}
-
-@media only screen and (max-width:434px) {
-    section.capabilities {
-        padding: 10px 15px
-    }
-}
 .specialty{
-    height: 50vw;
     text-align: center;
     width: 33.3%;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: center;
+    margin: 15px 0;
+}
+
+.capability__message{
+    font-size: 3.5vw;
+    font-weight: 400;
+    line-height: 1;
+    text-transform: uppercase;
+}
+@media only screen and (min-width:414px) {
+    .capability__message{
+        font-size: 14.455px;
+    }
 }
 @media only screen and (max-width:767px) {
     .our-attorneys {
