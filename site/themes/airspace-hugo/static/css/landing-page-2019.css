@@ -32,15 +32,25 @@
     font-variant: normal !important;
     text-transform: none !important;
     speak: none;
-    line-height: 1;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     font-size: 20vw;
 }
+.subhero__as-seen-on-icons [class^="icon-"]:before,
+.subhero__as-seen-on-icons [class*=" icon-"]:before{
+    font-size: 14vw;
+}
+
 @media only screen and (min-width:414px) {
     [class*=" icon-"]:before {
         font-size: 82.8px;
     }
+
+    .subhero__as-seen-on-icons [class^="icon-"]:before,
+    .subhero__as-seen-on-icons [class*=" icon-"]:before{
+        font-size: 57.96px;
+    }
+
 }
 .icon-abc-black:before {
     content: "\61";
@@ -74,18 +84,22 @@
 }
 .icon-come2you:before {
     content: "\6b";
+    line-height: 1;
 }
 .icon-wlf-long-black:before {
     content: "\6c";
 }
 .icon-wlf-shield-black:before {
+    color: #fff;
     content: "\6d";
+    line-height: initial;
 }
 .icon-fox:before {
     content: "\6e";
 }
 .icon-justice:before {
     content: "\6f";
+    line-height: 1;
 }
 .icon-ktla5:before {
     content: "\70";
@@ -95,15 +109,18 @@
 }
 .icon-lost-wages:before {
     content: "\72";
+    line-height: 1;
 }
 .icon-max-compensation:before {
     content: "\73";
+    line-height: 1;
 }
 .icon-med-bills:before {
     content: "\74";
 }
 .icon-privacy:before {
     content: "\75";
+    line-height: 1;
 }
 .icon-tap2call:before {
     content: "\76";
@@ -328,13 +345,12 @@ p.help-block.error{
 }
 
 .subhero__as-seen-on {
-    color: #0c1c42;
     display: flex;
     flex-direction: column;
     font-size: 15px;
     font-weight: bold;
     margin: 0;
-    padding: 0 10px
+    padding: 10px;
 }
 
 .subhero__as-seen-on P {
@@ -367,7 +383,7 @@ p.help-block.error{
 
 .images-in-a-row {
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     overflow: hidden
 }
 
@@ -380,7 +396,6 @@ p.help-block.error{
 .subhero__as-seen-on-images>img {
     padding: 0 5px
 }
-
 .subhero__as-seen-on-images img:first-of-type {
     padding-left: 0
 }
@@ -1142,9 +1157,6 @@ a.card-header--inactive {
     text-decoration: none !important;
     padding-bottom: 0;
     padding-top: 0;
-    text-shadow: 2px 2px 5px #292929 !important;
-    -webkit-box-shadow: 0 2px 10px 0 #050505;
-    box-shadow: 0 2px 10px 0 #050505;
     background: #f16824;
     position: fixed;
     bottom: 0;

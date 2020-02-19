@@ -28,11 +28,10 @@
 
     <!--tablet header -->
     <div class="tablet header d-none d-md-flex">
-      <picture>
-        <source data-srcset="{{ .Site.BaseURL }}img/WLF_96px-03.webp" type="image/webp" class="img-fluid">
-        <source data-srcset="{{ .Site.BaseURL }}img/WLF_96px-03.png" type="image/png" class="img-fluid">
-        <img data-srcset="{{ .Site.BaseURL }}img/WLF_96px-03.png" src="{{ .Site.BaseURL }}img/WLF_96px-03.png" class="img-fluid" alt="Wilshire Law Firm logo">
-      </picture>
+      <section class="section-header-logo">
+        <div class="icon-wlf-shield-black">
+        </div>
+      </section>
       <a class="header__phonenum capPhone" href="tel:<?=$default_phone?>" onclick="dataLayer.push({'event':'Contact', 'eventAction':'Call', 'eventNumber': 'Header Mobile Call- <?=$default_phone?>'});">
         <span>1.<?=$formatted_number?></span>
       </a>
