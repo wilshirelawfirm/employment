@@ -9,7 +9,15 @@ body {
     margin: 0 auto;
     width: 100%
 }
-
+p{
+    color: #414042;
+    font-size: 4.5vw;
+}
+@media only screen and (min-width:414px) {
+    p{
+        font-size: 18.63px;
+    }
+}
 h1 {
     font-family: 'Open Sans', sans-serif;
     color: #0c1c42;

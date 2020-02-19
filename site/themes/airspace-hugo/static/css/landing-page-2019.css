@@ -540,10 +540,16 @@ p.subhero__no-win-desktop-no-win-text {
 }
 
 .whywlf {
-    background: #0c1c42;
-    color: #fff
+    background: #FFF;
+    padding: 20px;
+    text-align: center;
 }
-
+.whywlf h2{
+    color: #3c4e66;
+}
+.whywlf p{
+    color: #414042;
+}
 .recovered {
     background: #3c4e66;
     color: #fff;
