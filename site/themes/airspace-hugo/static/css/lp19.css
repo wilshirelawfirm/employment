@@ -36,8 +36,8 @@ h1 {
 }
 
 h2 {
-    color: #04306c;
     font-size: 1.4rem;
+    line-height: 1.4;
 }
 h3{
     font-size: 1.2rem;

@@ -829,9 +829,9 @@ div.ginput_complex.ginput_container.gf_name_has_2 span {
     transition: 0.15s all ease;
 }
 .wlf-form input.wlf-form--empty{
-    padding-top: 0;
-    padding-bottom: 18px;
-    transition: 0.15s all ease;
+    /*padding-top: 0;*/
+    /*padding-bottom: 18px;*/
+    /*transition: 0.15s all ease;*/
 }
 
 .wlf-form input::placeholder,
@@ -1396,8 +1396,9 @@ img {
     }
 }
 
-.swap-text {
-    background: #f2f2f2
+.supporttext {
+    background: #e9e9e9;
+    padding: 15px 5px;
 }
 
 @media only screen and (min-width:576px) and (max-width:1140px) {
