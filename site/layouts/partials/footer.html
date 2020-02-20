@@ -13,7 +13,7 @@
 </div>
 
 <!-- START MOBILE CALL POPUP -->
-<div id="mobile-pop-container">
+<div id="mobile-pop-container" class="d-none">
     <div class="visible-xs visible-sm">
         <div class="mobile-call-pop text-center">
             <a class="mobile-call-btn capPhone" href="tel:8553350244"
@@ -45,7 +45,6 @@
 
 <link rel="stylesheet" href="{{ .Site.BaseURL }}css/bootstrap-formhelpers.min.css">
 
-<script src="{{ .Site.BaseURL }}js/querystrings.min.js"></script>
 <script src="{{ .Site.BaseURL }}js/bootstrap-formhelpers.min.js"></script>
 <script src="{{ .Site.BaseURL }}js/validate.min.js"></script>
 <script src="{{ .Site.BaseURL }}js/underscore-min.js"></script>
@@ -112,21 +111,6 @@
             })
         */
 
-      var video_wrapper = $('.placeholder-youtube-video');
-      var observer = new IntersectionObserver(function(entries) {
-        // isIntersecting is true when element and viewport are overlapping
-        // isIntersecting is false when element and viewport don't overlap
-        if(entries[0].isIntersecting === true)
-          console.log('Element has just become visible in screen');
-        // $(".play-youtube-video-wrapper").css("display", "block");
-        // $(".placeholder-youtube-video").css("display", "none");
-        video_wrapper.html('<iframe id="video" allowfullscreen frameborder="0" class="embed-responsive-item" src="' + video_wrapper.data('yt-url') + '"></iframe>');
-      }, { threshold: [0] });
-
-      observer.observe(document.querySelector(".placeholder-youtube-video"));
-
-
-
 
     });
 </script>
@@ -154,32 +138,45 @@ https://io.clickguard.com/n/cHJvdGVjdG9y/je8TmfGv
 
 <!-- begin ClickGUARD Conversion Code -->
 <script type="text/javascript">
-    jQuery(document).ready(function ($) {
-        $(function () {
-            $('.subhero__phone-num').on('click', function () {
-                cg_convert('Header phone number');
-            });
-        });
-        $(function () {
-            $('.hero .gform_button').on('click', function () {
-                cg_convert('Hero Form');
-            });
-        });
-        $(function () {
-            $('.gform_footer .gform_button').on('click', function () {
-                cg_convert('Footer Form');
-            });
-        });
-        $(function () {
-            $('.ccl-slider-bubble').on('click', function () {
-                cg_convert('Client chat live');
-            });
-        });
-        $(function () {
-            $('.mobile-call-btn').on('click', function () {
-                cg_convert('Tap to call');
-            });
-        });
+  jQuery(document).ready(function ($) {
+    $(function () {
+      $('.subhero__phone-num').on('click', function () {
+        cg_convert('Header phone number');
+      });
     });
+    $(function () {
+      $('.hero .gform_button').on('click', function () {
+        cg_convert('Hero Form');
+      });
+    });
+    $(function () {
+      $('.gform_footer .gform_button').on('click', function () {
+        cg_convert('Footer Form');
+      });
+    });
+    $(function () {
+      $('.ccl-slider-bubble').on('click', function () {
+        cg_convert('Client chat live');
+      });
+    });
+    $(function () {
+      $('.mobile-call-btn').on('click', function () {
+        cg_convert('Tap to call');
+      });
+    });
+
+    var video_wrapper = $('.placeholder-youtube-video');
+    var observer = new IntersectionObserver(function (entries) {
+      // isIntersecting is true when element and viewport are overlapping
+      // isIntersecting is false when element and viewport don't overlap
+      if (entries[0].isIntersecting === true)
+        console.log('Element has just become visible in screen');
+      // $(".play-youtube-video-wrapper").css("display", "block");
+      $(video_wrapper).css("display", "block");
+      video_wrapper.html('<iframe id="video" allowfullscreen frameborder="0" class="embed-responsive-item" src="' + video_wrapper.data('yt-url') + '"></iframe>');
+    }, {threshold: [0]});
+
+    observer.observe(document.querySelector("#flag"));
+  });
 </script>
 <!-- end ClickGUARD Conversion Code -->
