@@ -319,7 +319,7 @@ h2 {
     margin: 0
 }
 .form-control{
-    height: 64px;
+    height: 50px;
 }
 noscript{
     color:#990000;
@@ -829,6 +829,7 @@ div.ginput_complex.ginput_container.gf_name_has_2 span {
     transition: 0.15s all ease;
 }
 .wlf-form input.wlf-form--empty{
+    font-size: 12px;
     padding-top: 0;
     padding-bottom: 18px;
     transition: 0.15s all ease;
