@@ -705,7 +705,7 @@ p.subhero__no-win-desktop-no-win-text {
 
 @media only screen and (max-width:767px) {
     .footer {
-        padding-bottom: 25vw
+        padding-bottom: 18vw;
     }
 }
 .footer__address{
