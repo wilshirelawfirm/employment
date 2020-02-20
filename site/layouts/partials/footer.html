@@ -84,20 +84,20 @@
 
         $("form").removeClass("d-none");
 
-        var video_wrapper = $('.youtube-video-place');
+/*        var video_wrapper = $('.youtube-video-place');
 //  Check to see if youtube wrapper exists
         if (video_wrapper.length) {
             console.log("exists!");
 // If user clicks on the video wrapper load the video.
             $('.placeholder-youtube-video').on('click', function (ev) {
                 console.log("clicked!");
-                /* Dynamically inject the iframe on demand of the user.
-                 Pull the youtube url from the data attribute on the wrapper element. */
+                /!* Dynamically inject the iframe on demand of the user.
+                 Pull the youtube url from the data attribute on the wrapper element. *!/
                 $(".play-youtube-video-wrapper").css("display", "block");
                 $(".placeholder-youtube-video").css("display", "none");
                 video_wrapper.html('<iframe id="video" allowfullscreen frameborder="0" class="embed-responsive-item" src="' + video_wrapper.data('yt-url') + '"></iframe>');
             });
-        }
+        }*/
 
         /*
 
@@ -111,6 +111,21 @@
               $(this).removeClass("wlf-form--empty");
             })
         */
+
+      var video_wrapper = $('.youtube-video-place');
+      var observer = new IntersectionObserver(function(entries) {
+        // isIntersecting is true when element and viewport are overlapping
+        // isIntersecting is false when element and viewport don't overlap
+        if(entries[0].isIntersecting === true)
+          console.log('Element has just become visible in screen');
+        $(".play-youtube-video-wrapper").css("display", "block");
+        $(".placeholder-youtube-video").css("display", "none");
+        video_wrapper.html('<iframe id="video" allowfullscreen frameborder="0" class="embed-responsive-item" src="' + video_wrapper.data('yt-url') + '"></iframe>');
+      }, { threshold: [0] });
+
+      observer.observe(document.querySelector(".placeholder-youtube-video"));
+
+
 
 
     });
