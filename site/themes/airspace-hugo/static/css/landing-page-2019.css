@@ -318,7 +318,9 @@ h2 {
 .hero .wlf-form {
     margin: 0
 }
-
+.form-control{
+    height: 52px;
+}
 noscript{
     color:#990000;
     background: #fff;
@@ -770,7 +772,7 @@ a.nav-link {
 }
 
 .wlf-form {
-    background: #0c1c42;
+    background: #3c4e66;
     color: #fff
 }
 
@@ -825,8 +827,14 @@ div.ginput_complex.ginput_container.gf_name_has_2 span {
     display: block;
     font-size: 11px;
     margin-top: 0;
-    padding: 10px;
-    width: 100%
+    width: 100%;
+    transition: 0.15s all ease;
+}
+.wlf-form input.wlf-form--empty{
+    padding-top: 0;
+    padding-left: 10px;
+    padding-bottom: 22px;
+    transition: 0.15s all ease;
 }
 
 .wlf-form input::placeholder,
@@ -843,15 +851,11 @@ div.ginput_complex.ginput_container.gf_name_has_2 span {
 }
 
 .wlf-form input[type=submit] {
-    background: #29a718;
-    background: -moz-linear-gradient(top, rgba(41, 167, 24, 1) 0, rgba(6, 84, 10, 1) 100%);
-    background: -webkit-linear-gradient(top, rgba(41, 167, 24, 1) 0, rgba(6, 84, 10, 1) 100%);
-    background: linear-gradient(to bottom, rgba(41, 167, 24, 1) 0, rgba(6, 84, 10, 1) 100%);
-    filter: progid: DXImageTransform.Microsoft.gradient(startColorstr='#29a718', endColorstr='#06540a', GradientType=0);
-    border-color: #29a718;
+    background: #f16824;
     color: #fff;
     font-size: 15px;
     font-weight: bold;
+    height: 42px;
     text-transform: uppercase
 }
 

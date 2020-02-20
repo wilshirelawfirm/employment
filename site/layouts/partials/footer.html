@@ -93,6 +93,18 @@
       });
     }
 
+
+    $(".form-control").on("input", function() {
+      $(this).removeClass("wlf-form--empty");
+    });
+    $(".form-control").on("blur", function() {
+      if (this.value == "") $(this).addClass("wlf-form--empty");
+    });
+    $(".form-control").on("focus", function() {
+      $(this).removeClass("wlf-form--empty");
+    })
+
+
   });
 </script>
 <script src="{{ .Site.BaseURL }}js/validatorCallOut.js"></script>
