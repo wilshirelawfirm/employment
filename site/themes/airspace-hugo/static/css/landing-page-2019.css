@@ -773,13 +773,11 @@ a.nav-link {
 
 .wlf-form {
     background: #3c4e66;
-    color: #fff
+    color: #fff;
 }
 
 .wlf-form__container {
-    max-width: 600px;
     margin: auto;
-    padding: 20px
 }
 
 .wlf-form ul {
