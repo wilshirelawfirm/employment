@@ -1,6 +1,14 @@
-<div class="video mobile-column-wrap">
-    <div class="video-responsive">
-        <iframe width="560" height="315" src="https://www.youtube.com/embed/-xOKnDfIacA" frameborder="0"
-                allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<div class="video mobile-column-wrap placeholder-youtube-video">
+    <picture>
+        <source data-srcset="{{ .Site.BaseURL }}img/nicole_yt_tn_mobile.webp" type="image/webp" class="img-fluid lazyload">
+        <source data-srcset="{{ .Site.BaseURL }}img/nicole_yt_tn_mobile.jpg" type="image/jpg" class="img-fluid lazyload">
+        <img data-srcset="{{ .Site.BaseURL }}img/nicole_yt_tn_mobile.jpg" src="{{ .Site.BaseURL }}img/nicole_yt_tn_mobile.jpg" class="img-fluid lazyload " alt="Best Lawyers Best Law Firms U.S. News and World Report 2020">
+    </picture>
+</div>
+
+
+<div class="play-youtube-video-wrapper video mobile-column-wrap" style="display: none">
+    <div class="youtube-video-place embed-responsive embed-responsive-16by9" data-yt-url="https://www.youtube.com/embed/-xOKnDfIacA?rel=0&showinfo=0&autoplay=1">
+
     </div>
 </div>

@@ -78,6 +78,21 @@
 
     $("form").removeClass("d-none");
 
+    var video_wrapper = $('.youtube-video-place');
+//  Check to see if youtube wrapper exists
+    if(video_wrapper.length){
+      console.log("exists!");
+// If user clicks on the video wrapper load the video.
+      $('.placeholder-youtube-video').on('click', function(ev){
+        console.log("clicked!");
+        /* Dynamically inject the iframe on demand of the user.
+         Pull the youtube url from the data attribute on the wrapper element. */
+        $(".play-youtube-video-wrapper").css("display", "block");
+        $(".placeholder-youtube-video").css("display", "none");
+        video_wrapper.html('<iframe id="video" allowfullscreen frameborder="0" class="embed-responsive-item" src="' + video_wrapper.data('yt-url') + '"></iframe>');
+      });
+    }
+
   });
 </script>
 <script src="{{ .Site.BaseURL }}js/validatorCallOut.js"></script>
