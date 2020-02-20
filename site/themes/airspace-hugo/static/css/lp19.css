@@ -39,7 +39,10 @@ h2 {
     color: #04306c;
     font-size: 1.4rem;
 }
-
+h3{
+    font-size: 1.2rem;
+    color: #f16824;
+}
 header {
     background: #0a214b
 }
