@@ -1432,7 +1432,16 @@ img {
     background: #e9e9e9;
     padding: 15px 5px;
 }
-
+.supporttext h2{
+    font-size: 27.2px;
+    line-height: 1.25;
+}
+@media only screen and (max-width:414px) {
+    .supporttext h2{
+        font-size: 6.6vw;
+        line-height: 1.25;
+    }
+}
 @media only screen and (min-width:576px) and (max-width:1140px) {
     .swap-text-container .container {
         max-width: none
