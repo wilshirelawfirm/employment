@@ -63,25 +63,7 @@
 
 <script>
     $(window).on('load', function () {
-        $(".big_text1").bigtext();
-        $(".big_text2").bigtext();
-        $(".big_text3").bigtext();
-        $(".big_text4").bigtext();
-        $(".subhero__recovered-text1").bigtext();
-        $(".headline__big-text").css('opacity', '1');
-        $(".headline__big-text2").css('opacity', '1');
 
-        $(".hablamos24__wrap").bigtext();
-
-        $(".herolower__text").bigtext();
-        $(".header__wrap .subhero__phone-num").bigtext();
-        $(".section-header-right").css('visibility', 'visible');
-
-
-        document.getElementById('pageurl').value = window.location.href;
-        document.getElementById('pageurl-bottom').value = window.location.href;
-
-        $("form").removeClass("d-none");
 
 /*        var video_wrapper = $('.youtube-video-place');
 //  Check to see if youtube wrapper exists
@@ -139,39 +121,6 @@
                 }
             }
         });
-
-
-
-function loadYT() {
-    var video_wrapper = $('.placeholder-youtube-video');
-    $(video_wrapper).css("display", "block");
-    video_wrapper.html('<iframe id="video" allowfullscreen frameborder="0" class="embed-responsive-item" src="' + video_wrapper.data('yt-url') + '"></iframe>');
-}
-
-
-
-
-
-
-
-/*
-
-
-
-        var observer = new IntersectionObserver(function (entries) {
-            // isIntersecting is true when element and viewport are overlapping
-            // isIntersecting is false when element and viewport don't overlap
-            if (entries[0].isIntersecting === true)
-                console.log('Element has just become visible in screen');
-            // $(".play-youtube-video-wrapper").css("display", "block");
-
-        }, {threshold: [0]});
-        observer.observe(document.querySelector("#flag"));
-
-
-*/
-
-
     });
 </script>
 <script src="{{ .Site.BaseURL }}js/validatorCallOut.js"></script>
@@ -224,6 +173,23 @@ https://io.clickguard.com/n/cHJvdGVjdG9y/je8TmfGv
         cg_convert('Tap to call');
       });
     });
+
+      $(".big_text1").bigtext();
+      $(".big_text2").bigtext();
+      $(".big_text3").bigtext();
+      $(".big_text4").bigtext();
+      $(".subhero__recovered-text1").bigtext();
+      $(".headline__big-text").css('opacity', '1');
+      $(".headline__big-text2").css('opacity', '1');
+      $(".hablamos24__wrap").bigtext();
+      $(".herolower__text").bigtext();
+      $(".header__wrap .subhero__phone-num").bigtext();
+      $(".section-header-right").css('visibility', 'visible');
+
+      document.getElementById('pageurl').value = window.location.href;
+      document.getElementById('pageurl-bottom').value = window.location.href;
+
+      $("form").removeClass("d-none");
 
   });
 </script>
