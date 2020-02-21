@@ -7,11 +7,7 @@
     <!-- mobile header -->
     <div class="mobile header d-md-none mobile-column-wrap">
       <section class="section-header-logo">
-        <picture>
-          <source data-srcset="{{ .Site.BaseURL }}img/WLF_96px-03.webp" type="image/webp" class="img-fluid">
-          <source data-srcset="{{ .Site.BaseURL }}img/WLF_96px-03.png" type="image/png" class="img-fluid">
-          <img data-srcset="{{ .Site.BaseURL }}img/WLF_96px-03.png" src="{{ .Site.BaseURL }}img/WLF_96px-03.png" class="img-fluid" alt="Wilshire Law Firm logo">
-        </picture>
+        <img data-srcset="{{ .Site.BaseURL }}img/wlf_shield_white.svg" src="{{ .Site.BaseURL }}img/wlf_shield_white.svg" class="img-fluid" alt="Wilshire Law Firm logo">
       </section>
       <div class="section-header-right">
         <a class="subhero__phone-num d-sm-block d-md-none capPhone" href="tel:<?=$default_phone?>" onclick="dataLayer.push({'event':'Contact', 'eventAction':'Call', 'eventNumber': 'Header Mobile Call- <?=$default_phone?>'});">
