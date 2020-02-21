@@ -110,21 +110,66 @@
               $(this).removeClass("wlf-form--empty");
             })
         */
+        sessionStorage.videoLoaded = null;
+        $.fn.inView = function(){
+            //Window Object
+            var win = $(window);
+            //Object to Check
+            obj = $(this);
+            //the top Scroll Position in the page
+            var scrollPosition = win.scrollTop();
+            //the end of the visible area in the page, starting from the scroll position
+            var visibleArea = win.scrollTop() + win.height();
+            //the end of the object to check
+            var objEndPos = (obj.offset().top + obj.outerHeight());
+
+            return(visibleArea >= objEndPos && scrollPosition <= objEndPos ? true : false)
+        };
+
+        $(window).scroll(function(){
+            // console.log("sessionStorage.videoLoaded=" + sessionStorage.videoLoaded);
+            if (sessionStorage.videoLoaded == "1") {
+            }else {
+                if ($(".placeholder-youtube-video").inView()) {
+                    sessionStorage.videoLoaded = "1";
+                    console.log("in view");
+                    var video_wrapper = $('.placeholder-youtube-video');
+                    $(video_wrapper).css("display", "block");
+                    video_wrapper.html('<iframe id="video" allowfullscreen frameborder="0" class="embed-responsive-item" src="' + video_wrapper.data('yt-url') + '"></iframe>');
+                }
+            }
+        });
 
 
-        var video_wrapper = $('.placeholder-youtube-video');
+
+function loadYT() {
+    var video_wrapper = $('.placeholder-youtube-video');
+    $(video_wrapper).css("display", "block");
+    video_wrapper.html('<iframe id="video" allowfullscreen frameborder="0" class="embed-responsive-item" src="' + video_wrapper.data('yt-url') + '"></iframe>');
+}
+
+
+
+
+
+
+
+/*
+
+
+
         var observer = new IntersectionObserver(function (entries) {
             // isIntersecting is true when element and viewport are overlapping
             // isIntersecting is false when element and viewport don't overlap
             if (entries[0].isIntersecting === true)
                 console.log('Element has just become visible in screen');
             // $(".play-youtube-video-wrapper").css("display", "block");
-            $(video_wrapper).css("display", "block");
-            video_wrapper.html('<iframe id="video" allowfullscreen frameborder="0" class="embed-responsive-item" src="' + video_wrapper.data('yt-url') + '"></iframe>');
+
         }, {threshold: [0]});
         observer.observe(document.querySelector("#flag"));
 
 
+*/
 
 
     });
