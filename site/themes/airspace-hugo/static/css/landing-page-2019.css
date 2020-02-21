@@ -1415,5 +1415,31 @@ img {
     margin: auto auto 20px auto;
     padding: 0 20px;
 }
+.placeholder-youtube-video{
+    background: #000;
+    height: 200px;
+    margin-bottom: 50px;
+}
+.placeholder-youtube-video--active{
+    background: transparent;
+    height: auto;
+}
+.video-container21by12{
+    overflow: hidden;
+    position: relative;
+    width:100%;
+}
+.video-container21by12::after {
+    padding-top: 62.30%;
+    display: block;
+    content: '';
+}
 
+.video-container21by12 iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
 form label {display:none;}

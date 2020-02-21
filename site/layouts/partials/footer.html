@@ -127,14 +127,14 @@
         };
 
         $(window).scroll(function(){
-            // console.log("sessionStorage.videoLoaded=" + sessionStorage.videoLoaded);
             if (sessionStorage.videoLoaded == "1") {
+                console.log("sessionStorage.videoLoaded=" + sessionStorage.videoLoaded);
             }else {
-                if ($(".placeholder-youtube-video").inView()) {
+                if ($("#videoflag").inView()) {
                     sessionStorage.videoLoaded = "1";
                     console.log("in view");
                     var video_wrapper = $('.placeholder-youtube-video');
-                    $(video_wrapper).css("display", "block");
+                    $(video_wrapper).addClass("placeholder-youtube-video--active");
                     video_wrapper.html('<iframe id="video" allowfullscreen frameborder="0" class="embed-responsive-item" src="' + video_wrapper.data('yt-url') + '"></iframe>');
                 }
             }
