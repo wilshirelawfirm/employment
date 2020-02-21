@@ -1413,8 +1413,9 @@ img {
 }
 .video{
     margin: auto auto 20px auto;
-    padding: 0 20px;
+    padding: 0 10px;
 }
+
 .placeholder-youtube-video{
     background: #000;
     height: 200px;
@@ -1430,7 +1431,7 @@ img {
     width:100%;
 }
 .video-container21by12::after {
-    padding-top: 62.30%;
+    padding-top: 56.25%;
     display: block;
     content: '';
 }
