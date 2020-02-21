@@ -247,34 +247,31 @@ Do not put anything in this file - it's only here so that hugo won't throw an er
         height: 173px;
     }
     .webp .standard.hero__attorneys div{
-        background: url(/img/hero-group-mobile.webp) no-repeat center 100%;
+        background-image: url('/img/hero-group-mobile.webp');
+        background-repeat: no-repeat;
+        background-position: center 100%;
     }
     .no-webp .standard.hero__attorneys div{
-        background: url(/img/hero-group-mobile.png) no-repeat center 100%;
+        background: url('/img/hero-group-mobile.png');
+        background-repeat: no-repeat;
+        background-position: center 100%;
     }
     @media only screen and (max-width:390px) {
-        .webp .standard.hero__attorneys div{
-            background: url(/img/hero-group-mobile.webp) no-repeat 80% 100%;
-        }
-        .no-webp .standard.hero__attorneys div{
-            background: url(/img/hero-group-mobile.png) no-repeat 80% 100%;
+        .webp .standard.hero__attorneys div,.no-webp .standard.hero__attorneys div{
+            background-position: 80% 100%;
         }
     }
     @media only screen and (max-width:360px) {
-        .webp .standard.hero__attorneys div{
-            background: url(/img/hero-group-mobile.webp) no-repeat 73% 100%;
+        .webp .standard.hero__attorneys div,.no-webp .standard.hero__attorneys div{
+            background-position: 70% 100%;
         }
-        .no-webp .standard.hero__attorneys div{
-            background: url(/img/hero-group-mobile.png) no-repeat 73% 100%;
-        }
+
     }
     @media only screen and (max-width:345px) {
         .webp .standard.hero__attorneys div{
-            background: url(/img/hero-group-mobile.webp) no-repeat 61% 100%;
+            background-position: 61% 100%;
         }
-        .no-webp .standard.hero__attorneys div{
-            background: url(/img/hero-group-mobile.png) no-repeat 61% 100%;
-        }
+
     }
         .hero {
         display: -webkit-flex;
