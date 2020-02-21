@@ -26,7 +26,7 @@
 }
 @font-face {
     font-family: 'Open Sans';
-    src: url('../fonts/OpenSans-SemiBold.ttf');
+    src: url('../fonts/OpenSans-Bold.ttf');
     url('../fonts/OpenSans-Bold.ttf') format('truetype'), font-weight: '700';
     font-style: normal;
     font-weight: 700;
