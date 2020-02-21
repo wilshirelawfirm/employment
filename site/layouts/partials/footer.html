@@ -63,35 +63,24 @@
 
 <script>
     $(window).on('load', function () {
+        $(".big_text1").bigtext();
+        $(".big_text2").bigtext();
+        $(".big_text3").bigtext();
+        $(".big_text4").bigtext();
+        $(".subhero__recovered-text1").bigtext();
+        $(".headline__big-text").css('opacity', '1');
+        $(".headline__big-text2").css('opacity', '1');
+        $(".hablamos24__wrap").bigtext();
+        $(".herolower__text").bigtext();
+        $(".header__wrap .subhero__phone-num").bigtext();
+        $(".section-header-right").css('visibility', 'visible');
+
+        document.getElementById('pageurl').value = window.location.href;
+        document.getElementById('pageurl-bottom').value = window.location.href;
+
+        $("form").removeClass("d-none");
 
 
-/*        var video_wrapper = $('.youtube-video-place');
-//  Check to see if youtube wrapper exists
-        if (video_wrapper.length) {
-            console.log("exists!");
-// If user clicks on the video wrapper load the video.
-            $('.placeholder-youtube-video').on('click', function (ev) {
-                console.log("clicked!");
-                /!* Dynamically inject the iframe on demand of the user.
-                 Pull the youtube url from the data attribute on the wrapper element. *!/
-                $(".play-youtube-video-wrapper").css("display", "block");
-                $(".placeholder-youtube-video").css("display", "none");
-                video_wrapper.html('<iframe id="video" allowfullscreen frameborder="0" class="embed-responsive-item" src="' + video_wrapper.data('yt-url') + '"></iframe>');
-            });
-        }*/
-
-        /*
-
-            $(".form-control").on("input", function() {
-              $(this).removeClass("wlf-form--empty");
-            });
-            $(".form-control").on("blur", function() {
-              if (this.value == "") $(this).addClass("wlf-form--empty");
-            });
-            $(".form-control").on("focus", function() {
-              $(this).removeClass("wlf-form--empty");
-            })
-        */
         sessionStorage.videoLoaded = null;
         $.fn.inView = function(){
             //Window Object
@@ -173,23 +162,6 @@ https://io.clickguard.com/n/cHJvdGVjdG9y/je8TmfGv
         cg_convert('Tap to call');
       });
     });
-
-      $(".big_text1").bigtext();
-      $(".big_text2").bigtext();
-      $(".big_text3").bigtext();
-      $(".big_text4").bigtext();
-      $(".subhero__recovered-text1").bigtext();
-      $(".headline__big-text").css('opacity', '1');
-      $(".headline__big-text2").css('opacity', '1');
-      $(".hablamos24__wrap").bigtext();
-      $(".herolower__text").bigtext();
-      $(".header__wrap .subhero__phone-num").bigtext();
-      $(".section-header-right").css('visibility', 'visible');
-
-      document.getElementById('pageurl').value = window.location.href;
-      document.getElementById('pageurl-bottom').value = window.location.href;
-
-      $("form").removeClass("d-none");
 
   });
 </script>
