@@ -345,6 +345,9 @@ h2 {
 .form-control{
     height: 50px;
 }
+textarea, input[type="range"], input, input:matches([type="password"], [type="search"]){
+    border-radius: 0;
+}
 noscript{
     color:#990000;
     background: #fff;
