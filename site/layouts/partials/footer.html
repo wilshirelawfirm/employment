@@ -110,7 +110,17 @@
               $(this).removeClass("wlf-form--empty");
             })
         */
-
+        var video_wrapper = $('.placeholder-youtube-video');
+        var observer = new IntersectionObserver(function (entries) {
+            // isIntersecting is true when element and viewport are overlapping
+            // isIntersecting is false when element and viewport don't overlap
+            if (entries[0].isIntersecting === true)
+                console.log('Element has just become visible in screen');
+            // $(".play-youtube-video-wrapper").css("display", "block");
+            $(video_wrapper).css("display", "block");
+            video_wrapper.html('<iframe id="video" allowfullscreen frameborder="0" class="embed-responsive-item" src="' + video_wrapper.data('yt-url') + '"></iframe>');
+        }, {threshold: [0]});
+        observer.observe(document.querySelector("#flag"));
 
     });
 </script>
@@ -165,18 +175,6 @@ https://io.clickguard.com/n/cHJvdGVjdG9y/je8TmfGv
       });
     });
 
-    var video_wrapper = $('.placeholder-youtube-video');
-    var observer = new IntersectionObserver(function (entries) {
-      // isIntersecting is true when element and viewport are overlapping
-      // isIntersecting is false when element and viewport don't overlap
-      if (entries[0].isIntersecting === true)
-        console.log('Element has just become visible in screen');
-      // $(".play-youtube-video-wrapper").css("display", "block");
-      $(video_wrapper).css("display", "block");
-      video_wrapper.html('<iframe id="video" allowfullscreen frameborder="0" class="embed-responsive-item" src="' + video_wrapper.data('yt-url') + '"></iframe>');
-    }, {threshold: [0]});
-
-    observer.observe(document.querySelector("#flag"));
   });
 </script>
 <!-- end ClickGUARD Conversion Code -->
