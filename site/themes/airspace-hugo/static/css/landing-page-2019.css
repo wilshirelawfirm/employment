@@ -560,7 +560,7 @@ p.subhero__no-win-desktop-no-win-text {
     width: 55%;
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: space-evenly;
 }
 .herolower__text{
     line-height: 1;
