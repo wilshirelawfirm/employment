@@ -203,13 +203,33 @@ h2 {
 
 @media only screen and (min-width:768px) {
     .header {
-        padding: 4px 10px
+        padding: 4px 2.6vw;
     }
 }
 
+.tablet{
+    max-width: 1440px;
+}
 
-
-
+.tablet.header .section-header-logo{
+    max-width: 300px;
+    width: 30vw;
+}
+.tablet.header{
+    align-items: center;
+    display: flex;
+    height: 81px;
+    justify-content: space-between;
+}
+.tablet a.header__phonenum{
+    color: #fff;
+    font-size: 3.4vw;
+}
+@media only screen and (min-width:883px) {
+    .tablet a.header__phonenum{
+        font-size: 30px;
+    }
+}
 .freeconsult {
     line-height: 1
 }
@@ -225,27 +245,48 @@ h2 {
 
 @media only screen and (min-width:768px) {
     .hablamos24 {
-        background: 0
     }
     .hablamos24__wrap {
-        background: #ffa800;
-        color: #000
+        color: #f16824;
+        font-size: 1.5vw;
+        line-height: 1;
     }
     .freeconsult {
         font-size: 25px;
         text-transform: uppercase
     }
 }
+@media only screen and (min-width:967px) {
+    .hablamos24__wrap {
+        font-size: 14px;
+    }
+}
 
+#border{
+    border-right: 1px solid #fff;
+    position: absolute;
+    top: 5px;
+    bottom: 5px;
+    right:0;
+}
+
+.header__chatwidget{
+    display: inline-block;
+    margin-left: 10px;
+    width: 30px;
+}
 @media only screen and (min-width:992px) {
     .freeconsult {
         font-size: 30px
     }
 }
-
+.header__rightsection{
+    align-items: center;
+    display: flex;
+}
 @media only screen and (min-width:768px) and (max-width:850px) {
     .hablamos24__wrap {
-        font-size: 11px
+        /*font-size: 11px*/
     }
 }
 
@@ -1260,8 +1301,8 @@ a.mobile-call-btn:active {
 
 @media only screen and (min-width:768px) {
     .section-header-logo {
+        height: auto;
         padding: 0;
-        width: auto
     }
 }
 

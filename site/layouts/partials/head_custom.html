@@ -18,7 +18,13 @@ Do not put anything in this file - it's only here so that hugo won't throw an er
     .header__wrap {
         background: #3c4e66;
     }
-
+    @media screen AND (min-width:768px) {
+        .header__wrap{
+            align-items: center;
+            display: flex;
+            height: 81px;
+        }
+    }
 
     .u-remove-all-padding {
         padding: 0!important
@@ -180,7 +186,6 @@ Do not put anything in this file - it's only here so that hugo won't throw an er
         display: flex;
         padding: 0;
         text-align: center;
-        width: 100%;
         justify-content: center;
     }
 
@@ -207,7 +212,6 @@ Do not put anything in this file - it's only here so that hugo won't throw an er
     }
 
     .hablamos24__block1 {
-        border-right: 1px solid rgba(0, 0, 0, .3);
         text-align: center
     }
 
@@ -232,6 +236,9 @@ Do not put anything in this file - it's only here so that hugo won't throw an er
         .hablamos24__block1,
         .hablamos24__block2 {
             padding: 12px 15px 12px 15px
+        }
+        .hablamos24__block1{
+            position: relative;
         }
     }
 

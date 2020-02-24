@@ -5,7 +5,7 @@
   <div class="container-fluid u-remove-all-padding">
 
     <!-- mobile header -->
-    <div class="mobile header d-md-none mobile-column-wrap">
+    <div class="mobile header d-md-none mobile-column-wrap d-sm-flex">
       <section class="section-header-logo">
         <img data-srcset="{{ .Site.BaseURL }}img/wlf_shield_white.svg" src="{{ .Site.BaseURL }}img/wlf_shield_white.svg" class="img-fluid" alt="Wilshire Law Firm logo">
       </section>
@@ -13,9 +13,9 @@
         <a class="subhero__phone-num d-sm-block d-md-none capPhone" href="tel:<?=$default_phone?>" onclick="dataLayer.push({'event':'Contact', 'eventAction':'Call', 'eventNumber': 'Header Mobile Call- <?=$default_phone?>'});">
           <span>1.800.522.7274</span>
         </a>
-        <img src="{{ .Site.BaseURL }}img/header_divider.png" data-src="<?php echo get_stylesheet_directory_uri(); ?>/homepage-2019/assets/images/lp19v3/header_divider.png" class="img-fluid" alt="">
+        <img src="" data-src="{{ .Site.BaseURL }}img/header_divider.png" class="img-fluid lazyload" alt="">
         <section class="hablamos24" style="width:100%;">
-          <div class="hablamos24__wrap capPhone" style="width: 100%;">
+          <div class="hablamos24__wrap capPhone big_text5" style="width: 100%;">
             <span>HABLAMOS ESPANOL &#8226; AVAILABLE 24/7</span>
           </div>
         </section>
@@ -25,20 +25,21 @@
     <!--tablet header -->
     <div class="tablet header d-none d-md-flex">
       <section class="section-header-logo">
-        <div class="icon-wlf-shield-black">
-        </div>
+        <img data-src="{{ .Site.BaseURL }}img/wlf_long_white.svg" src=""
+             class="img-fluid lazyload" alt="Wilshire Law Firm logo">
       </section>
-      <a class="header__phonenum capPhone" href="tel:<?=$default_phone?>" onclick="dataLayer.push({'event':'Contact', 'eventAction':'Call', 'eventNumber': 'Header Mobile Call- <?=$default_phone?>'});">
-        <span>1.<?=$formatted_number?></span>
-      </a>
-      <div class="hablamos-24 header__text1">
-        <?=$hablamos24__block1?><br />
-        <?=$hablamos24__block2?>
+      <div class="hablamos24__wrap capPhone">
+        <span>HABLAMOS ESPANOL &#8226; AVAILABLE 24/7</span>
       </div>
-      <div class="header__chatwidget header__text1">
-<!--        <img src="<?php echo get_stylesheet_directory_uri(); ?>/homepage-2019/assets/images/lp19v3/Chat_Widget.svg" data-src="<?php echo get_stylesheet_directory_uri(); ?>/homepage-2019/assets/images/lp19v3/Chat_Widget.svg" class="img-fluid" alt="">-->
-        <div>CHAT<br />WITH US</div>
+      <div class="header__rightsection">
+        <a class="header__phonenum capPhone font-weight-semi" href="tel:18005227274" onclick="dataLayer.push({'event':'Contact', 'eventAction':'Call', 'eventNumber': 'Header Mobile Call- 1.800.522.7274'});">
+          1.800.522.7274
+        </a>
+        <div class="header__chatwidget header__text1">
+          <img src="" data-src="{{ .Site.BaseURL }}img/Chat_Widget.svg" class="img-fluid lazyload" alt="">
+        </div>
       </div>
+
     </div>
 
   </div>
