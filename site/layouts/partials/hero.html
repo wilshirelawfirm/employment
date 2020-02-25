@@ -1,67 +1,88 @@
-<div class="standard hero-wrap">
+<div class="standard hero-wrap d-sm-block d-md-block d-lg-none">
     <div class="container-fluid u-remove-all-padding">
         <section class="hero">
             <div class="hero__left">
                 <div class="hero__headline mobile-column-wrap">
-                    <h1 class="d-sm-block d-md-none">
+                    <h1 class="d-sm-block d-md-block">
                         <div class="headline__big-text font-weight-bold big_text1">
                             <span>YOU DON'T PAY</span>
                             <span>UNLESS YOU WIN</span>
                         </div>
                     </h1>
-                    <h2 class="d-sm-block d-md-none  big_text2 font-weight-regular text-center">
+                    <h2 class="d-sm-block d-md-block d-lg-none big_text2 font-weight-regular text-center">
                         <span>Award-winning employment<br>and class action lawyers</span>
                     </h2>
-                    <h1 class="d-none d-md-block">
-                        <div class="headline__big-text font-weight-bold big_text3">
-                            <span>YOU DON'T PAY UNLESS YOU WIN</span>
-                        </div>
-                    </h1>
-                    <h2 class="d-none d-md-block">
-                        <div class="headline__big-text2 font-weight-regular big_text4">
-                            <div>Award-Winning  <span class="insertKW">Car Accident Lawyers</span></div>
-                        </div>
-                    </h2>
                 </div>
-
                 <div class="standard hero__attorneys">
-                    <div class="d-sm-block d-md-none">
-
-                    </div>
-
-                    <div class="d-none d-md-block">
+                    <div class="d-sm-block d-md-block d-lg-none">
 
                     </div>
                 </div>
             </div>
+        </section>
+    </div>
+</div>
+<div class="desktop hero-wrap d-none d-lg-block">
+    <div class="container-fluid tablet">
+        <section class="hero">
+            <div class="hero__headline">
+                <h1 class="">
+                    <div class="headline__big-text font-weight-bold big_text1">
+                        <span>YOU DON'T PAY</span>
+                        <span>UNLESS YOU WIN</span>
+                    </div>
+                </h1>
+                <h2 class="">
+                    <div class="headline__big-text2 font-weight-regular">
+                        <div>Award-Winning employment <br>and class action lawyers</div>
+                    </div>
+                </h2>
+                <picture class="superlawyers">
+                    <source data-srcset="{{ .Site.BaseURL }}img/super-lawyers-desktop.webp" type="image/webp" class="img-fluid">
+                    <source data-srcset="{{ .Site.BaseURL }}img/super-lawyers-desktop.jpg" type="image/jpg" class="img-fluid">
+                    <img data-src="{{ .Site.BaseURL }}img/super-lawyers-desktop.jpg" src="" class="img-fluid lazyload" alt="Super Lawyers">
+                </picture>
+            </div>
 
-            <div class="wlf-form text-center whywlf d-none d-md-flex" id="wlf-form">
+            <picture class="attorneys">
+                <source data-srcset="{{ .Site.BaseURL }}img/attorneys-desktop.webp" type="image/webp" class="img-fluid">
+                <source data-srcset="{{ .Site.BaseURL }}img/attorneys-desktop.png" type="image/png" class="img-fluid">
+                <img data-src="{{ .Site.BaseURL }}img/attorneys-desktop.png" src="" class="img-fluid lazyload" alt="Group of Attorneys">
+            </picture>
+
+            <div class="wlf-form whywlf d-lg-flex" id="wlf-form">
                 <div class="wlf-form__container">
-                    <div class="hero__form-title">FREE CONSULTATION 24/7</div>
+                    <div class="hero__form-title text-left">FREE CONSULTATION 24/7</div>
                     <div class="wlf-form__container">
                         <noscript>PLEASE ENABLE JAVASCRIPT IN YOUR BROWSER TO SEE THE FORM</noscript>
-                        <form name="LP19_Top_Form" class="d-none" method="POST" data-netlify="true" action="/thank-you/" id="LP19_Top_Form" netlify-honeypot="honeypot-bot-field" novalidate>
+                        <form name="LP19_Top_Form" class="d-none" method="POST" data-netlify="true" action="/thank-you/"
+                              id="LP19_Top_Form" netlify-honeypot="honeypot-bot-field" novalidate>
                             <div class="form-group d-none">
-                                <label>Don’t fill this out if you're human: <input name="honeypot-bot-field" /></label>
+                                <label>Don’t fill this out if you're human: <input name="honeypot-bot-field"/></label>
                             </div>
                             <div class="form-group">
                                 <label for="firstName" class="control-label">First Name</label>
-                                <input name="firstName" class="form-control" id="firstName" placeholder="First Name" aria-label="Enter Your First Name">
+                                <input name="firstName" class="form-control" id="firstName" placeholder="First Name"
+                                       aria-label="Enter Your First Name">
                                 <div class="messages"></div>
                             </div>
                             <div class="form-group">
                                 <label for="lastName" class="control-label">Last Name</label>
-                                <input name="lastName" class="form-control" id="lastName" placeholder="Last Name" aria-label="Enter Your Last Name">
+                                <input name="lastName" class="form-control" id="lastName" placeholder="Last Name"
+                                       aria-label="Enter Your Last Name">
                                 <div class="messages"></div>
                             </div>
                             <div class="form-group">
                                 <label for="phone" class="control-label">Phone Number</label>
-                                <input name="phone" id="phone" type="tel" class="form-control bfh-phone" data-country="US" placeholder="Phone Number" aria-label="Enter Your Phone Number">
+                                <input name="phone" id="phone" type="tel" class="form-control bfh-phone"
+                                       data-country="US" placeholder="Phone Number"
+                                       aria-label="Enter Your Phone Number">
                                 <div class="messages"></div>
                             </div>
                             <div class="form-group">
                                 <label for="email" class="control-label">Email Address</label>
-                                <input name="email" type="email" class="form-control" id="email" placeholder="Email Address" aria-label="Enter Your Email Address">
+                                <input name="email" type="email" class="form-control" id="email"
+                                       placeholder="Email Address" aria-label="Enter Your Email Address">
                                 <div class="messages"></div>
                             </div>
                             <div class="form-group">
@@ -69,7 +90,7 @@
                                 <div class="messages"></div>
                             </div>
                             <div class="form-group">
-                                <input name="pageurl" id="pageurl" type="hidden" value="pageurl" />
+                                <input name="pageurl" id="pageurl" type="hidden" value="pageurl"/>
                                 <input name="branchname" id="branchname" type="hidden" value="lp19short">
                                 <div class="messages"></div>
                             </div>
@@ -80,7 +101,6 @@
                         </form>
                     </div>
                 </div>
-            </div>
         </section>
     </div>
 </div>

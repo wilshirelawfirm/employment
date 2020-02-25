@@ -63,6 +63,10 @@
     font-size: 14vw;
 }
 
+.desktop .subhero__as-seen-on-icons [class^="icon-"]:before{
+    font-size: 4vw;
+}
+
 @media only screen and (min-width:414px) {
     [class*=" icon-"]:before {
         font-size: 82.8px;
@@ -209,6 +213,7 @@ h2 {
 
 .tablet{
     max-width: 1440px;
+    padding: 0 2.6vw;
 }
 
 .tablet.header .section-header-logo{
@@ -309,28 +314,18 @@ h2 {
     }
 }
 
-@media only screen and (min-width:1000px) {
-    .hero__form-title {
-        font-size: 1.90vw
-    }
 
-}
 
-@media only screen and (min-width:1284px) {
-    .hero__form-title {
-        font-size: 24.396px
-    }
-}
 .swap-text input{
     height: 40px;
 }
-@media only screen and (min-width:768px) {
+@media only screen and (min-width:992px) {
     .form-group{
-        margin-bottom: 8px;
+        margin-bottom: 6px;
     }
     .wlf-form input,
     .wlf-form textarea {
-        height: 40px;
+        height: 30px;
         padding: 12px;
     }
     .wlf-form input[type=text]{
@@ -347,30 +342,36 @@ h2 {
     }
 }
 @media only screen and (min-width:1000px) {
+    /*
     .wlf-form input {
         height: 45px;
     }
     .wlf-form input.form-control.is-invalid{
         height: 35px;
     }
+    */
 }
 
 @media only screen and (min-width:1100px) {
+    /*
     .wlf-form input {
         height: 50px;
     }
     .wlf-form input.form-control.is-invalid{
         height: 35px;
     }
+    */
 }
 
 @media only screen and (min-width:1200px) {
+    /*
     .wlf-form input {
         height: 55px;
     }
     .wlf-form input.form-control.is-invalid{
         height: 35px;
     }
+    */
 }
 
 .wlf-form input[type=submit]{
@@ -404,7 +405,7 @@ p.help-block.error{
     margin-bottom: 0;
 }
 .subhero__wrap {
-    background: #fff;
+    background: #e9e9e9;
     margin-bottom: 10px
 }
 
@@ -434,9 +435,9 @@ p.help-block.error{
     }
 }
 
-@media only screen and (min-width:768px) {
+@media only screen and (min-width:992px) {
     .subhero__as-seen-on {
-        font-size: 18px;
+        font-size: 14px;
         padding: 0 10px 0 20px;
         display: block;
         width: 30%
@@ -457,7 +458,7 @@ p.help-block.error{
     overflow: hidden
 }
 
-@media only screen and (min-width:768px) {
+@media only screen and (min-width:992px) {
     .images-in-a-row {
         justify-content: space-between
     }
@@ -492,28 +493,24 @@ p.help-block.error{
 
 .subhero__no-win-desktop {
     align-items: center;
-    font-size: 2.5vw;
+    font-size: 10px;
     font-weight: bold;
     justify-content: space-between;
     height: auto;
-    padding: 15px 10px 15px 10px;
-    flex-shrink: 1
+    padding: 10px 5px 10px 5px;
+    flex-shrink: 1;
+    width: 25%;
 }
 
-@media only screen and (min-width:1000px) {
-    .subhero__no-win-desktop {
-        font-size: 26px
-    }
-}
-
-p.subhero__no-win-desktop-no-win-text {
-    line-height: 1;
-    margin-bottom: 0
-}
 
 .subhero__no-win-desktop-no-win-text {
-    color: #0c1c42
+    line-height: 1;
+    margin-bottom: 0;
+    color: #0c1c42;
+    width: 14vw;
+    overflow: hidden;
 }
+
 
 .subhero__no-win-desktop-no-win-text span {
     white-space: nowrap
@@ -556,8 +553,9 @@ p.subhero__no-win-desktop-no-win-text {
 
 .subhero__no-win-desktop_block2 {
     padding-left: 5px;
-    min-width: 80px;
-    width: 44%
+    min-width: 90px;
+    max-width: 160px;
+    /*width: 44%*/
 }
 
 .subhero__recovered-desktop {
@@ -611,7 +609,7 @@ p.subhero__no-win-desktop-no-win-text {
 
 .whywlf {
     background: #FFF;
-    padding: 20px;
+    padding: 0;
     text-align: center;
 }
 .whywlf h2{
@@ -897,10 +895,16 @@ div.ginput_complex.ginput_container.gf_name_has_2 span {
     color: #37548a;
     display: block;
     font-size: 16px;
+    height: 35px;
     margin-top: 0;
     width: 100%;
     transition: 0.15s all ease;
 }
+.desktop .wlf-form input,
+.desktop .wlf-form textarea {
+    font-size: 12px;
+}
+
 .wlf-form input.wlf-form--empty{
     /*padding-top: 0;*/
     /*padding-bottom: 18px;*/
@@ -922,10 +926,10 @@ div.ginput_complex.ginput_container.gf_name_has_2 span {
 
 .wlf-form input[type=submit] {
     background: #f16824;
+    border: none;
     color: #fff;
     font-size: 15px;
     font-weight: bold;
-    height: 42px;
     text-transform: uppercase
 }
 

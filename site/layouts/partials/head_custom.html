@@ -3,7 +3,7 @@ If you want to include any custom html just before </head>, put it in /layouts/p
 Do not put anything in this file - it's only here so that hugo won't throw an error if /layouts/partials/head_custom.html doesn't exist.
 -->
 <style>
-    @media screen AND (min-width:768px) {
+    @media screen AND (min-width:992px) {
         #mobile-pop-container {
             display: none
         }
@@ -18,10 +18,9 @@ Do not put anything in this file - it's only here so that hugo won't throw an er
     .header__wrap {
         background: #3c4e66;
     }
-    @media screen AND (min-width:768px) {
+    @media screen AND (min-width:992px) {
         .header__wrap{
             align-items: center;
-            display: flex;
             height: 81px;
         }
     }
@@ -141,14 +140,13 @@ Do not put anything in this file - it's only here so that hugo won't throw an er
 
     .subhero {
         align-items: center;
-        background: #fff;
         display: flex;
         flex-direction: column;
         justify-content: space-around;
         padding: 0
     }
 
-    @media only screen and (min-width:768px) {
+    @media only screen and (min-width:992px) {
         .subhero {
             flex-direction: row;
             justify-content: space-evenly
@@ -232,7 +230,7 @@ Do not put anything in this file - it's only here so that hugo won't throw an er
         }
     }
 
-    @media only screen and (min-width:768px) {
+    @media only screen and (min-width:992px) {
         .hablamos24__block1,
         .hablamos24__block2 {
             padding: 12px 15px 12px 15px
@@ -242,13 +240,17 @@ Do not put anything in this file - it's only here so that hugo won't throw an er
         }
     }
 
-    .standard.hero-wrap {
+    .hero-wrap {
         /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#ced7e0+0,ffffff+100 */
         background: #ced7e0; /* Old browsers */
         background: -moz-linear-gradient(top,  #ced7e0 0%, #ffffff 100%); /* FF3.6-15 */
         background: -webkit-linear-gradient(top,  #ced7e0 0%,#ffffff 100%); /* Chrome10-25,Safari5.1-6 */
         background: linear-gradient(to bottom,  #ced7e0 0%,#ffffff 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
         filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ced7e0', endColorstr='#ffffff',GradientType=0 ); /* IE6-9 */
+    }
+
+    .desktop.hero-wrap{
+        overflow: hidden;
     }
     .standard.hero__attorneys div{
         height: 173px;
@@ -272,19 +274,48 @@ Do not put anything in this file - it's only here so that hugo won't throw an er
         .webp .standard.hero__attorneys div,.no-webp .standard.hero__attorneys div{
             background-position: 70% 100%;
         }
-
     }
     @media only screen and (max-width:345px) {
         .webp .standard.hero__attorneys div{
             background-position: 61% 100%;
         }
-
     }
-        .hero {
+
+
+
+/*    @media only screen and (min-width:992px) {
+        .webp .desktop .hero{
+            background-image: url('/img/attorneys-desktop.png');
+        }
+        .nowebp .desktop .hero{
+            background-image: url('/img/attorneys-desktop.webp');
+        }
+        .desktop .hero{
+            background-repeat: no-repeat;
+        }
+    }*/
+
+
+
+
+
+    .desktop .hero {
+        height: 24vw;
+    }
+    .desktop .attorneys{
+        display: flex;
+        align-self: flex-end;
+    }
+    .hero {
         display: -webkit-flex;
         display: flex;
         -webkit-justify-content: center;
         justify-content: center
+    }
+    @media only screen and (min-width:992px) {
+        .hero{
+            justify-content: space-between;
+        }
     }
 
     section {
@@ -303,17 +334,26 @@ Do not put anything in this file - it's only here so that hugo won't throw an er
         padding-top: 10px;
         margin: 0 auto;
         max-width: 500px;
-        width: 85%
+        width: 85%;
+    }
+    .desktop .hero__headline{
+        max-width: none;
+        display: flex;
+        flex-direction: column;
+        height: 75%;
+        justify-content: space-evenly;
     }
 
     .hero__headline h1,
     .hero__headline h2 {
         border: 0 solid #ccc;
         color: #3d4e68;
-        font-size: 20px;
-        width: 100%
+        font-size: 10px;
+        width: 100%;
     }
-
+    .desktop .hero__headline h2{
+        font-size: 18px;
+    }
     .hero__headline h1 {
         text-transform: uppercase
     }
@@ -330,22 +370,15 @@ Do not put anything in this file - it's only here so that hugo won't throw an er
         font-size: 9px;
         line-height: 1
     }
-
-    @media only screen and (min-width:768px) {
-        .standard.hero-wrap {
-            background-image: url('/img/hero-bg-desktop.jpg');
-            background-size: cover
-        }
+    @media only screen and (min-width:992px) {
         .standard .hero__left {
             width: 70%
         }
         .hero__headline {
-            border: 0 solid #ccc;
             margin: 0;
-            max-width: 100%;
-            padding: 10px 10px 0 0;
-            text-align: left;
-            width: 100%
+            padding: 0;
+            position: absolute;
+            width: 28vw;
         }
         .hero__attorneys {
             display: block;
@@ -353,18 +386,22 @@ Do not put anything in this file - it's only here so that hugo won't throw an er
         }
         .hero .wlf-form {
             background: 0 0;
-            width: 28%
+            width: 30%;
+            max-width: 273px;
         }
         .hero .wlf-form__container {
-            padding: 10px;
             width: 100%
         }
         .darion .hero .wlf-form__container {
             padding: 0
         }
+        .desktop picture.attorneys{
+            margin-left: 24vw;
+            margin-right: 1vw;
+        }
         .hero__form-title {
             color: #000;
-            font-size: 1.7vw;
+            font-size: 1.5vw;
             font-weight: 700
         }
         .esp .darion .hero__form-title {
@@ -381,6 +418,10 @@ Do not put anything in this file - it's only here so that hugo won't throw an er
             display: -ms-flexbox;
             -ms-flex-pack: center;
             width: 30%
+        }
+        .desktop .superlawyers img{
+            max-width: 178px;
+            width: 15vw;
         }
     }
 
