@@ -300,8 +300,15 @@ Do not put anything in this file - it's only here so that hugo won't throw an er
 
 
     .desktop .hero {
-        height: 24vw;
+        height: 23vw;
     }
+
+    @media only screen and (min-width:1440px) {
+        .desktop .hero {
+            height: 331.188px;
+        }
+    }
+
     .desktop .attorneys{
         display: flex;
         align-self: flex-end;
@@ -363,6 +370,14 @@ Do not put anything in this file - it's only here so that hugo won't throw an er
     .desktop .hero__headline h2{
         font-size: 18px;
     }
+
+    @media only screen and (min-width:1440px) {
+        .desktop .hero__headline{
+            width: 403.188px;
+        }
+    }
+
+
     .hero__headline h1 {
         text-transform: uppercase
     }
@@ -410,7 +425,7 @@ Do not put anything in this file - it's only here so that hugo won't throw an er
         }
         .hero__form-title {
             color: #000;
-            font-size: 1.5vw;
+            font-size: 1.2vw;
             font-weight: 700
         }
         .esp .darion .hero__form-title {
@@ -433,8 +448,18 @@ Do not put anything in this file - it's only here so that hugo won't throw an er
             width: 15vw;
         }
     }
-
-    .hero__attorneys {
+    @media only screen and (min-width:1440px) {
+        .hero__form-title{
+            font-size:17.28px
+        }
+    }
+    @media only screen and (min-width:1440px) {
+        .desktop picture.attorneys{
+            margin-left: 345.6px;;
+            margin-right: 14.4px;;
+        }
+    }
+        .hero__attorneys {
         text-align: center;
         width: 100%
     }
