@@ -75,7 +75,12 @@
 .desktop .subhero__as-seen-on-icons [class*=" icon-"]:before{
     font-size: 4vw;
 }
-
+@media only screen and (min-width:1440px) {
+    .desktop .subhero__as-seen-on-icons [class^="icon-"]:before,
+    .desktop .subhero__as-seen-on-icons [class*=" icon-"]:before{
+        font-size: 57.6px;
+    }
+}
 .icon-abc-black:before {
     content: "\61";
 }
@@ -421,6 +426,11 @@ h2 {
     overflow: hidden;
 }
 
+@media screen and (min-width: 1440px){
+    .subhero__no-win-desktop-no-win-text{
+        width: 201.594px;
+    }
+}
 
 .subhero__no-win-desktop-no-win-text span {
     white-space: nowrap
@@ -1005,7 +1015,11 @@ div.ginput_complex.ginput_container.gf_name_has_2 span {
 .hero .form-group{
     margin-bottom: 0.5vw;
 }
-
+@media screen and (min-width: 1440px) {
+    .hero .form-group{
+        margin-bottom: 7.2px;
+    }
+}
 textarea, input[type="range"], input, input:matches([type="password"], [type="search"]){
     border-radius: 0;
 }
