@@ -277,7 +277,7 @@ h2 {
 .header__chatwidget{
     display: inline-block;
     margin-left: 10px;
-    width: 30px;
+    width: 45px;
 }
 @media only screen and (min-width:992px) {
     .freeconsult {
