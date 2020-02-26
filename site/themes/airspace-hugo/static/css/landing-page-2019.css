@@ -58,14 +58,6 @@
     -moz-osx-font-smoothing: grayscale;
     font-size: 20vw;
 }
-.subhero__as-seen-on-icons [class^="icon-"]:before,
-.subhero__as-seen-on-icons [class*=" icon-"]:before{
-    font-size: 14vw;
-}
-
-.desktop .subhero__as-seen-on-icons [class^="icon-"]:before{
-    font-size: 4vw;
-}
 
 @media only screen and (min-width:414px) {
     [class*=" icon-"]:before {
@@ -78,6 +70,12 @@
     }
 
 }
+
+.desktop .subhero__as-seen-on-icons [class^="icon-"]:before,
+.desktop .subhero__as-seen-on-icons [class*=" icon-"]:before{
+    font-size: 4vw;
+}
+
 .icon-abc-black:before {
     content: "\61";
 }
@@ -319,91 +317,7 @@ h2 {
 .swap-text input{
     height: 40px;
 }
-@media only screen and (min-width:992px) {
-    .form-group{
-        margin-bottom: 6px;
-    }
-    .wlf-form input,
-    .wlf-form textarea {
-        height: 30px;
-        padding: 12px;
-    }
-    .wlf-form input[type=text]{
-        padding: 0 0 0 12px;
-    }
-    .wlf-form input[type=submit]{
-        padding: 0;
-    }
-    .hero .wlf-form__container li {
-        line-height: .5 !important
-    }
-    .gform_button.button {
-        height: auto
-    }
-}
-@media only screen and (min-width:1000px) {
-    /*
-    .wlf-form input {
-        height: 45px;
-    }
-    .wlf-form input.form-control.is-invalid{
-        height: 35px;
-    }
-    */
-}
 
-@media only screen and (min-width:1100px) {
-    /*
-    .wlf-form input {
-        height: 50px;
-    }
-    .wlf-form input.form-control.is-invalid{
-        height: 35px;
-    }
-    */
-}
-
-@media only screen and (min-width:1200px) {
-    /*
-    .wlf-form input {
-        height: 55px;
-    }
-    .wlf-form input.form-control.is-invalid{
-        height: 35px;
-    }
-    */
-}
-
-.wlf-form input[type=submit]{
-    padding: 0;
-}
-.wlf-form textarea {
-    padding: 10px
-}
-
-.hero .wlf-form {
-    margin: 0
-}
-.form-control{
-    height: 50px;
-}
-textarea, input[type="range"], input, input:matches([type="password"], [type="search"]){
-    border-radius: 0;
-}
-noscript{
-    color:#990000;
-    background: #fff;
-    display: block;
-}
-.help-block.error{
-    font-size: 12px;
-    color: #fff;
-    background: #dc3545;
-    border: 1px solid red;
-}
-p.help-block.error{
-    margin-bottom: 0;
-}
 .subhero__wrap {
     background: #e9e9e9;
     margin-bottom: 10px
@@ -447,7 +361,7 @@ p.help-block.error{
     }
     .subhero__border {
         border-right: 1px solid #ccc;
-        height: 110px;
+        height: 60px;
         width: 1px
     }
 }
@@ -499,7 +413,7 @@ p.help-block.error{
     height: auto;
     padding: 10px 5px 10px 5px;
     flex-shrink: 1;
-    width: 25%;
+    width: 24%;
 }
 
 
@@ -612,11 +526,26 @@ p.help-block.error{
     padding: 0;
     text-align: center;
 }
+@media (min-width: 992px) {
+    .whywlf {
+        padding: 30px 0;
+    }
+}
+@media (min-width: 1200px) {
+    .whywlf .container {
+        max-width: 960px !important;
+    }
+}
 .whywlf h2{
     color: #3c4e66;
 }
 .whywlf p{
     color: #414042;
+}
+.whywlf p{
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 768px;
 }
 .recovered {
     background: #3c4e66;
@@ -843,14 +772,24 @@ a.nav-link {
 }
 
 .wlf-form {
-    background: #3c4e66;
+    background: #e9e9e9;
     color: #fff;
 }
 
 .wlf-form__container {
     margin: auto;
+    width: 100%;
 }
-
+@media only screen and (max-width:767px) {
+    .wlf-form__container {
+        margin: auto;
+    }
+}
+@media only screen and (max-width:991px) {
+    .wlf-form__container {
+        padding: 20px 5px;
+    }
+}
 .wlf-form ul {
     list-style: none;
     padding: 0
@@ -864,8 +803,26 @@ a.nav-link {
     display: none
 }
 .wlf-form h2{
-    color: #fff;
+    color: #3c4e66;
+    display: inline-block;
+    font-weight: bold;
 }
+.whywlf__submit{
+    margin-bottom: 0 !important;
+}
+@media only screen and (min-width: 576px) and (max-width:991px) {
+    .whywlf__paragraph_container {
+        padding: 0;
+    }
+}
+
+@media only screen and (max-width: 991px) {
+
+    .whywlf__paragraph_container {
+        padding: 15px;
+    }
+}
+
 div.ginput_container_name span {
     display: -moz-inline-stack;
     display: inline-block;
@@ -933,10 +890,6 @@ div.ginput_complex.ginput_container.gf_name_has_2 span {
     text-transform: uppercase
 }
 
-.wlf-form h2 {
-    font-weight: bold
-}
-
 .wlf-form--text1 {
     font-size: 24px;
     font-weight: bold
@@ -946,6 +899,95 @@ div.ginput_complex.ginput_container.gf_name_has_2 span {
     font-size: 18px
 }
 
+@media only screen and (min-width:992px) {
+    .form-group{
+        margin-bottom: 10px;
+    }
+    .wlf-form{
+        background: #e9e9e9;
+    }
+    .wlf-form input,
+    .wlf-form textarea {
+        font-size: 12px;
+        height: 38px;
+        padding: 12px;
+    }
+    .wlf-form input[type=text]{
+        padding: 0 0 0 12px;
+    }
+    .wlf-form input[type=submit]{
+        padding: 0;
+    }
+    .hero .wlf-form__container li {
+        line-height: .5 !important
+    }
+    .gform_button.button {
+        height: auto
+    }
+}
+@media only screen and (min-width:1000px) {
+    /*
+    .wlf-form input {
+        height: 45px;
+    }
+    .wlf-form input.form-control.is-invalid{
+        height: 35px;
+    }
+    */
+}
+
+@media only screen and (min-width:1100px) {
+    /*
+    .wlf-form input {
+        height: 50px;
+    }
+    .wlf-form input.form-control.is-invalid{
+        height: 35px;
+    }
+    */
+}
+
+@media only screen and (min-width:1200px) {
+    /*
+    .wlf-form input {
+        height: 55px;
+    }
+    .wlf-form input.form-control.is-invalid{
+        height: 35px;
+    }
+    */
+}
+
+.wlf-form input[type=submit]{
+    padding: 0;
+}
+.wlf-form textarea {
+    padding: 10px
+}
+
+.hero .wlf-form {
+    margin: 0
+}
+.form-control{
+    height: 50px;
+}
+textarea, input[type="range"], input, input:matches([type="password"], [type="search"]){
+    border-radius: 0;
+}
+noscript{
+    color:#990000;
+    background: #fff;
+    display: block;
+}
+.help-block.error{
+    font-size: 12px;
+    color: #fff;
+    background: #dc3545;
+    border: 1px solid red;
+}
+p.help-block.error{
+    margin-bottom: 0;
+}
 ul.bullet-box {
     margin-bottom: 0
 }
@@ -1408,6 +1450,13 @@ img {
     margin: 15px 0;
 }
 
+@media only screen and (min-width:992px) {
+    .specialty {
+        padding: 0 20px;
+        width: unset;
+    }
+}
+
 .capability__message{
     font-size: 3.5vw;
     font-weight: 400;
@@ -1481,6 +1530,29 @@ img {
     font-size: 27.2px;
     line-height: 1.25;
 }
+.supporttext__paragraph_container{
+    background: #e9e9e9;
+    float: left;
+    width: 100%;
+}
+.supporttext__paragraph_container__header_mobile{
+    display: flex;
+    justify-content: space-between;
+}
+.supporttext__paragraph_container__header_mobile h2{
+    width: 60%;
+}
+@media only screen and (min-width:768px) and (max-width: 991px) {
+    .supporttext__paragraph_container{
+        float: left;
+        width: 100%;
+    }
+}
+@media only screen and (min-width:992px) {
+    .supporttext__paragraph_container{
+        width: 80%;
+    }
+}
 @media only screen and (max-width:414px) {
     .supporttext h2{
         font-size: 6.6vw;
@@ -1496,7 +1568,12 @@ img {
     margin: auto auto 20px auto;
     padding: 0 10px;
 }
-
+@media only screen and (min-width:992px) {
+    .mobile-desktop.video {
+        max-width: 600px;
+        padding: 0;
+    }
+}
 .placeholder-youtube-video{
     background: #000;
     height: 200px;

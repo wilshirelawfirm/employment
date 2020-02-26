@@ -11,13 +11,13 @@ body {
 }
 p{
     color: #414042;
-    font-size: 4.5vw;
+    font-size: 14px;
 }
-@media only screen and (min-width:414px) {
+/*@media only screen and (max-width: 1200px) {
     p{
-        font-size: 18.63px;
+        font-size: 14px;
     }
-}
+}*/
 h1 {
     font-family: 'Open Sans', sans-serif;
     color: #0c1c42;
@@ -531,21 +531,15 @@ ul {
 }
 
 section.capabilities {
-    margin: 0 auto;
+    margin: 1% auto;
 }
 
 section.capabilities h2 {
     display: block;
-    margin: 5% auto 0 auto;
+    margin: auto;
     color: #3c4e66;
     text-transform: uppercase;
     text-align: center;
-}
-
-@media only screen and (min-width:768px) {
-    section.capabilities h2 {
-        font-size: 2rem
-    }
 }
 
 .what-we-can-do-container {
@@ -556,6 +550,21 @@ section.capabilities h2 {
     justify-content: center;
     padding: 0 10px;
 }
+.mobile-desktop{
+    margin-left: auto;
+    margin-right: auto;
+}
+@media only screen and (max-width:991px) {
+    .mobile-desktop{
+        max-width: 414px;
+    }
+}
+@media only screen and (min-width:992px) {
+    .mobile-desktop{
+        max-width: 1440px;
+    }
+}
+
 
 .speciality .capability {
     width: 245px;
