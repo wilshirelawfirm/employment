@@ -836,6 +836,7 @@ a.nav-link {
 }
 @media only screen and (min-width:992px) {
     .whywlf__form__container__before{
+        max-height: 494px;
         padding:25px;
     }
 }
