@@ -895,7 +895,7 @@ div.ginput_complex.ginput_container.gf_name_has_2 span {
     color: #37548a;
     display: block;
     font-size: 16px;
-    height: 43px;
+    height: 38px;
     margin-top: 0;
     width: 100%;
     transition: 0.15s all ease;
@@ -954,6 +954,7 @@ div.ginput_complex.ginput_container.gf_name_has_2 span {
 }
 .bottom-form h3{
     line-height: 0.7;
+    margin-bottom: 1.3rem;
 }
 @media only screen and (min-width:992px) {
     .wlf-form.whywlf .form-group{
