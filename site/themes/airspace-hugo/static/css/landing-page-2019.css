@@ -872,6 +872,9 @@ a.nav-link {
     .whywlf__paragraph_container {
         padding: 15px;
     }
+    .whywlf__paragraph_container h2{
+        line-height: 1.25;
+    }
 }
 
 div.ginput_container_name span {
@@ -1639,9 +1642,11 @@ img {
 .supporttext__paragraph_container__header_mobile{
     display: flex;
     justify-content: space-between;
+    margin-bottom: 10px;
 }
 .supporttext__paragraph_container__header_mobile h2{
-    width: 60%;
+    margin-bottom: 0;
+    width: 64%;
 }
 @media only screen and (max-width: 575px) {
     .supporttext__paragraph_container{

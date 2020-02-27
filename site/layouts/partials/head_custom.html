@@ -345,10 +345,12 @@ Do not put anything in this file - it's only here so that hugo won't throw an er
     }
     .desktop .hero__headline{
         max-width: none;
-        display: flex;
+        /*display: flex;*/
+        /*-webkit-justify-content: space-between;*/
+        /*display: -ms-flexbox;*/
         flex-direction: column;
-        height: 80%;
-        justify-content: space-evenly;
+        height: 100%;
+        /*justify-content: space-evenly;*/
     }
 
     .hero__headline h1,
@@ -406,6 +408,7 @@ Do not put anything in this file - it's only here so that hugo won't throw an er
             margin: 0;
             padding: 0;
             position: absolute;
+            top: 0;
             width: 22vw;
         }
         .hero__attorneys {

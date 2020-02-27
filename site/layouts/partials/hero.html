@@ -26,22 +26,27 @@
     <div class="container-fluid tablet">
         <section class="hero">
             <div class="hero__headline">
-                <h1 class="">
-                    <div class="headline__big-text font-weight-bold big_text1">
-                        <span>YOU DON'T PAY</span>
-                        <span>UNLESS YOU WIN</span>
+                <div style="height: 100%;display: flex;flex-direction: column;justify-content: center;">
+                    <div class="d-flex" style="flex-direction: column;height: 80%; justify-content: space-evenly;">
+                        <h1>
+                            <div class="headline__big-text font-weight-bold big_text1">
+                                <span>YOU DON'T PAY</span>
+                                <span>UNLESS YOU WIN</span>
+                            </div>
+                        </h1>
+                        <h2 class="">
+                            <div class="headline__big-text2 font-weight-regular">
+                                <div>Award-Winning employment <br>and class action lawyers</div>
+                            </div>
+                        </h2>
+                        <picture class="superlawyers">
+                            <source data-srcset="{{ .Site.BaseURL }}img/super-lawyers-desktop.webp" type="image/webp" class="img-fluid">
+                            <source data-srcset="{{ .Site.BaseURL }}img/super-lawyers-desktop.png" type="image/png" class="img-fluid">
+                            <img data-src="{{ .Site.BaseURL }}img/super-lawyers-desktop.png" src="" class="img-fluid lazyload" alt="Super Lawyers">
+                        </picture>
                     </div>
-                </h1>
-                <h2 class="">
-                    <div class="headline__big-text2 font-weight-regular">
-                        <div>Award-Winning employment <br>and class action lawyers</div>
-                    </div>
-                </h2>
-                <picture class="superlawyers">
-                    <source data-srcset="{{ .Site.BaseURL }}img/super-lawyers-desktop.webp" type="image/webp" class="img-fluid">
-                    <source data-srcset="{{ .Site.BaseURL }}img/super-lawyers-desktop.png" type="image/png" class="img-fluid">
-                    <img data-src="{{ .Site.BaseURL }}img/super-lawyers-desktop.png" src="" class="img-fluid lazyload" alt="Super Lawyers">
-                </picture>
+                </div>
+
             </div>
 
             <picture class="attorneys">
