@@ -73,13 +73,7 @@
 
 .desktop .subhero__as-seen-on-icons [class^="icon-"]:before,
 .desktop .subhero__as-seen-on-icons [class*=" icon-"]:before{
-    font-size: 4vw;
-}
-@media only screen and (min-width:1440px) {
-    .desktop .subhero__as-seen-on-icons [class^="icon-"]:before,
-    .desktop .subhero__as-seen-on-icons [class*=" icon-"]:before{
-        font-size: 57.6px;
-    }
+    font-size: 39.68px;
 }
 .icon-abc-black:before {
     content: "\61";
@@ -260,9 +254,14 @@ h2 {
         text-transform: uppercase
     }
 }
-@media only screen and (min-width:967px) {
+@media only screen and (min-width:992px) {
     .hablamos24__wrap {
-        font-size: 14px;
+        font-size: 1.5vw;
+    }
+}
+@media only screen and (min-width:1200px) {
+    .hablamos24__wrap {
+        font-size: 18px;
     }
 }
 
@@ -276,7 +275,7 @@ h2 {
 
 .header__chatwidget{
     display: inline-block;
-    margin-left: 10px;
+    margin-left: 20px;
     width: 45px;
 }
 @media only screen and (min-width:992px) {
@@ -355,7 +354,6 @@ h2 {
         font-size: 14px;
         padding: 0 10px 0 20px;
         display: block;
-        width: 30%
     }
     .subhero__as-seen-on P {
         text-align: left
@@ -369,16 +367,11 @@ h2 {
 
 .images-in-a-row {
     display: flex;
-    justify-content: space-between;
     overflow: hidden
 }
-
-@media only screen and (min-width:992px) {
-    .images-in-a-row {
-        justify-content: space-between
-    }
+.subhero__as-seen-on-icons.images-in-a-row>div{
+    margin-right:10px;
 }
-
 .subhero__as-seen-on-images>img {
     padding: 0 5px
 }
@@ -421,7 +414,6 @@ h2 {
 .subhero__no-win-desktop-no-win-text {
     line-height: 1;
     margin-bottom: 0;
-    color: #0c1c42;
     width: 14vw;
     overflow: hidden;
 }
@@ -461,7 +453,6 @@ h2 {
 }
 
 .subhero__no-win-desktop-learn-more {
-    color: #0c1c42;
     white-space: nowrap
 }
 
@@ -480,7 +471,6 @@ h2 {
 
 .subhero__recovered-desktop {
     align-items: center;
-    color: #0c1c42;
     display: flex;
     font-weight: bold;
     flex-direction: column;
@@ -589,7 +579,6 @@ h2 {
 
 .featured-result__sect1 h3 {
     padding: 8px 0 0 20px;
-    color: #0c1c42;
     text-align: left
 }
 
@@ -598,7 +587,6 @@ h2 {
 }
 
 .featured-result__sect4 h3 {
-    color: #0c1c42
 }
 
 .featured-result__sect4 span {
@@ -816,7 +804,6 @@ a.nav-link {
     }
 }
 @media only screen and (max-width:767px) {
-
     .whywlf__form__container__before {
         background: #3c4e66;
         display: flex;
@@ -824,6 +811,20 @@ a.nav-link {
         margin: auto;
     }
 }
+@media only screen and (max-width:992px) {
+    .whywlf__form__container__before{
+        padding:20px;
+    }
+    .bottom-form .wlf-form__container {
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+
+}
+
+
 
 .wlf-form ul {
     list-style: none;
@@ -887,7 +888,7 @@ div.ginput_complex.ginput_container.gf_name_has_2 span {
     color: #37548a;
     display: block;
     font-size: 16px;
-    height: 35px;
+    height: 40px;
     margin-top: 0;
     width: 100%;
     transition: 0.15s all ease;
@@ -944,8 +945,13 @@ div.ginput_complex.ginput_container.gf_name_has_2 span {
     .wlf-form{
         background: #e9e9e9;
     }
-    .wlf-form input,
-    .wlf-form textarea {
+    .hero .wlf-form input{
+        font-size: 12px;
+        height: 3vw;
+        padding: 12px;
+    }
+    .footer .wlf-form input,
+    .footer .wlf-form textarea {
         font-size: 12px;
         height: 38px;
         padding: 12px;
@@ -963,11 +969,26 @@ div.ginput_complex.ginput_container.gf_name_has_2 span {
         height: auto
     }
 }
-@media only screen and (min-width:1440px) {
+@media only screen and (min-width:992px) {
     .form-group{
 
     }
+    .wlf-form input,.wlf-form textarea{
+        font-size: 12px;
+    }
+    #btnSubmitTop{
+        font-size: 1.2vw;
+    }
 }
+@media only screen and (min-width:1440px) {
+    .hero .wlf-form input {
+        height: 43.1875px;
+    }
+    #btnSubmitTop{
+        font-size: 17.28px;
+    }
+}
+
 @media only screen and (min-width:1000px) {
     /*
     .wlf-form input {
@@ -1107,7 +1128,6 @@ ul.bullet-box {
     font-size: .8em;
     color: #fff;
     line-height: 2.5;
-    background-color: #0c1c42;
     width: 100%;
     max-width: 190.5px;
     margin: auto;
@@ -1200,7 +1220,6 @@ ul.bullet-box {
 }
 
 a.card-header--active {
-    background: #0c1c42;
     color: #fff;
     padding-bottom: 5px;
     text-decoration: none;
@@ -1505,7 +1524,7 @@ img {
 @media only screen and (min-width:992px) {
     .specialty {
         padding: 0 20px;
-        width: unset;
+        width: 20%;
     }
 }
 
@@ -1609,7 +1628,8 @@ img {
 }
 @media only screen and (min-width:992px) {
     .supporttext__paragraph_container{
-        width: 80%;
+        padding-left: 10px;
+        width: 75%;
     }
 }
 @media only screen and (max-width:414px) {
