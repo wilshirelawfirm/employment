@@ -1671,8 +1671,8 @@ img {
 .webp .supporttext__badge_mobile{
     background-image: url('/img/CELA.webp');
 }
-.nowebp .supporttext__badge_mobile{
-    background-image: url('/img/CELA.png');
+.no-webp .supporttext__badge_mobile{
+    background-image: url('/img/CELA.jpg');
 }
 .supporttext__badge_mobile{
     width: 36%;
