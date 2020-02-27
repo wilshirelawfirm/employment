@@ -1015,7 +1015,7 @@ div.ginput_complex.ginput_container.gf_name_has_2 span {
 }
 @media only screen and (min-width:1440px) {
     .hero .wlf-form input {
-        height: 43.1875px;
+        height: 40.2813px;
     }
     #btnSubmitTop{
         font-size: 17.28px;
@@ -1666,6 +1666,18 @@ img {
         padding-left: 10px;
         width: 75%;
     }
+}
+.webp .supporttext__badge_mobile{
+    background-image: url('/img/CELA.webp');
+}
+.nowebp .supporttext__badge_mobile{
+    background-image: url('/img/CELA.png');
+}
+.supporttext__badge_mobile{
+    width: 36%;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: right;
 }
 @media only screen and (max-width:414px) {
     .supporttext h2{
