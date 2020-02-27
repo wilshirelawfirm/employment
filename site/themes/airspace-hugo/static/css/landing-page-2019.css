@@ -56,20 +56,25 @@
     speak: none;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
-    font-size: 20vw;
+    /*font-size: 20vw;*/
 }
 
 @media only screen and (min-width:414px) {
     [class*=" icon-"]:before {
         font-size: 82.8px;
     }
-
-    .subhero__as-seen-on-icons [class^="icon-"]:before,
-    .subhero__as-seen-on-icons [class*=" icon-"]:before{
-        font-size: 57.96px;
-    }
-
 }
+
+@media only screen and (max-width: 991px) {
+    .subhero__as-seen-on-icons [class^="icon-"]:before,
+    .subhero__as-seen-on-icons [class*=" icon-"]:before {
+        font-size: 39.68px;
+    }
+    .subhero__as-seen-on-icons{
+        justify-content: space-between;
+    }
+}
+
 
 .desktop .subhero__as-seen-on-icons [class^="icon-"]:before,
 .desktop .subhero__as-seen-on-icons [class*=" icon-"]:before{
