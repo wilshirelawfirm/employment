@@ -891,7 +891,18 @@ div.ginput_complex.ginput_container.gf_name_has_2 span {
 
 .wlf-form input,
 .wlf-form textarea {
-    border: none;
+    border: 1px solid #33518c;
+    color: #37548a;
+    display: block;
+    font-size: 16px;
+    height: 43px;
+    margin-top: 0;
+    width: 100%;
+    transition: 0.15s all ease;
+}
+.bottom-form .wlf-form input,
+.bottom-form .wlf-form textarea {
+    border: 1px solid #33518c;
     color: #37548a;
     display: block;
     font-size: 16px;
