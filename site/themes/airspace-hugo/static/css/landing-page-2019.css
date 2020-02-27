@@ -806,7 +806,7 @@ a.nav-link {
 }
 @media only screen and (max-width:991px) {
     .wlf-form__container {
-        padding: 20px 5px;
+        padding: 25px 10px;
     }
 }
 @media only screen and (max-width:767px) {
@@ -818,9 +818,6 @@ a.nav-link {
     }
 }
 @media only screen and (max-width:991px) {
-    .whywlf__form__container__before{
-        padding:20px;
-    }
     .bottom-form .wlf-form__container {
         height: 100%;
         display: flex;
@@ -831,7 +828,7 @@ a.nav-link {
 }
 @media only screen and (min-width:992px) {
     .whywlf__form__container__before{
-        padding:20px;
+        padding:25px;
     }
 }
 
@@ -894,7 +891,7 @@ div.ginput_complex.ginput_container.gf_name_has_2 span {
 
 .wlf-form input,
 .wlf-form textarea {
-    border: 1px solid #33518c;
+    border: none;
     color: #37548a;
     display: block;
     font-size: 16px;
@@ -944,7 +941,9 @@ div.ginput_complex.ginput_container.gf_name_has_2 span {
 .wlf-form--text2 {
     font-size: 18px
 }
-
+.bottom-form h3{
+    line-height: 0.7;
+}
 @media only screen and (min-width:992px) {
     .wlf-form.whywlf .form-group{
         margin-bottom: 16px;
@@ -952,15 +951,13 @@ div.ginput_complex.ginput_container.gf_name_has_2 span {
     .bottom-form.wlf-form.whywlf .form-group{
         margin-bottom: 12px;
     }
-    .bottom-form h3{
-        line-height: 0.7;
-    }
+
     .wlf-form{
         background: #e9e9e9;
     }
     .hero .wlf-form input{
         font-size: 12px;
-        height: 3vw;
+        height: 2.8vw;
         padding: 12px;
     }
     .footer .wlf-form input,
