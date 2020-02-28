@@ -80,6 +80,16 @@
 .desktop .subhero__as-seen-on-icons [class*=" icon-"]:before{
     font-size: 3.4vw;
 }
+
+@media only screen and (min-width: 1440px) {
+    .desktop .subhero__as-seen-on-icons [class^="icon-"]:before,
+    .desktop .subhero__as-seen-on-icons [class*=" icon-"]:before {
+        font-size: 48.96px;
+    }
+}
+
+
+
 .icon-abc-black:before {
     content: "\61";
 }
@@ -355,7 +365,6 @@ h2 {
         width: 100%
     }
 }
-
 @media only screen and (min-width:992px) {
     .subhero__as-seen-on {
         font-size: 14px;
@@ -373,7 +382,11 @@ h2 {
         width: 1px
     }
 }
-
+@media only screen and (min-width:1440px) {
+    .subhero__as-seen-on {
+        padding-right: 57.6px;
+    }
+}
 .images-in-a-row {
     display: flex;
     overflow: hidden;
@@ -416,7 +429,6 @@ h2 {
     justify-content: space-between;
     height: auto;
     padding: 10px 4vw;
-    flex-shrink: 1;
     width: 32%;
 }
 
@@ -432,8 +444,13 @@ h2 {
 }
 
 @media screen and (min-width: 1440px){
+    .subhero__no-win-desktop{
+        padding-left: 57.6px;
+        padding-right: 57.6px;
+        width: 436.594px;
+    }
     .subhero__no-win-desktop-no-win-text{
-        width: 201.594px;
+        width: 245.859px;
     }
 }
 
@@ -449,6 +466,10 @@ h2 {
     font-size: 8px;
     margin-left: 4vw;
     white-space: nowrap;
+}@media screen and (min-width: 1440px){
+    .subhero__recovered-text1{
+        margin-left: 57.6px;
+    }
 }
 
 .subhero__recovered-text1-esp {
@@ -491,10 +512,13 @@ h2 {
     justify-content: center;
     line-height: 1;
     /*padding: 0 20px 0 10px;*/
-    flex-shrink: 2;
     width: 34%;
 }
-
+@media only screen and (min-width:1440px) {
+    .subhero__recovered-desktop {
+        width: 463.031px;
+    }
+}
 @media only screen and (max-width:991px) and (min-width:768px) {
     .subhero__recovered-desktop {
         max-width: 182px;
