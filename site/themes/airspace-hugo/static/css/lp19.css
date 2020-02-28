@@ -558,10 +558,16 @@ section.capabilities h2 {
     .mobile-desktop{
         max-width: 414px;
     }
+    .what-we-can-do-container{
+        max-width: 500px;
+    }
 }
 @media only screen and (min-width:992px) {
     .mobile-desktop{
         max-width: 760px;
+    }
+    .what-we-can-do-container{
+        max-width: 992px;
     }
 }
 

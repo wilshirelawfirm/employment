@@ -78,7 +78,7 @@
 
 .desktop .subhero__as-seen-on-icons [class^="icon-"]:before,
 .desktop .subhero__as-seen-on-icons [class*=" icon-"]:before{
-    font-size: 39.68px;
+    font-size: 3.4vw;
 }
 .icon-abc-black:before {
     content: "\61";
@@ -110,19 +110,17 @@
 .icon-univision:before {
     content: "\6a";
 }
+.icon-cash-advance:before {
+    content: "\68";
+    line-height: 1;
+}
 .icon-come2you:before {
     content: "\6b";
     line-height: 1;
 }
-.icon-wlf-long-black:before {
-    content: "\6c";
-    line-height: initial;
-    color: #fff;
-}
-.icon-wlf-shield-black:before {
-    color: #fff;
+.icon-psych:before {
     content: "\6d";
-    line-height: initial;
+    line-height: 1;
 }
 .icon-fox:before {
     content: "\6e";
@@ -327,7 +325,11 @@ h2 {
     background: #e9e9e9;
     margin-bottom: 10px
 }
-
+.subhero__wrap .container-fluid{
+    max-width: 1440px;
+    padding-left: 2.6vw !important;
+    padding-right: 2.6vw !important;
+}
 @media only screen and (min-width:768px) {
     .subhero__wrap {
         margin-bottom: 0
@@ -357,8 +359,10 @@ h2 {
 @media only screen and (min-width:992px) {
     .subhero__as-seen-on {
         font-size: 14px;
-        padding: 0 10px 0 20px;
+        padding: 0;
+        padding-right: 4vw;
         display: block;
+        width: 34%;
     }
     .subhero__as-seen-on P {
         text-align: left
@@ -372,10 +376,11 @@ h2 {
 
 .images-in-a-row {
     display: flex;
-    overflow: hidden
+    overflow: hidden;
+    justify-content: space-between;
 }
 .subhero__as-seen-on-icons.images-in-a-row>div{
-    margin-right:10px;
+    /*margin-right:10px;*/
 }
 .subhero__as-seen-on-images>img {
     padding: 0 5px
@@ -410,17 +415,19 @@ h2 {
     font-weight: bold;
     justify-content: space-between;
     height: auto;
-    padding: 10px 5px 10px 5px;
+    padding: 10px 4vw;
     flex-shrink: 1;
-    width: 24%;
+    width: 32%;
 }
 
-
+.subhero__no-win-desktop picture{
+    min-width: 50px;
+}
 .subhero__no-win-desktop-no-win-text {
     line-height: 1;
     margin-bottom: 0;
-    width: 14vw;
-    overflow: hidden;
+    padding-right:15px;
+    width: 100%;
 }
 
 @media screen and (min-width: 1440px){
@@ -439,7 +446,8 @@ h2 {
 
 .subhero__recovered-text1 {
     font-size: 8px;
-    white-space: nowrap
+    margin-left: 4vw;
+    white-space: nowrap;
 }
 
 .subhero__recovered-text1-esp {
@@ -481,8 +489,9 @@ h2 {
     flex-direction: column;
     justify-content: center;
     line-height: 1;
-    padding: 0 20px 0 10px;
-    flex-shrink: 2
+    /*padding: 0 20px 0 10px;*/
+    flex-shrink: 2;
+    width: 34%;
 }
 
 @media only screen and (max-width:991px) and (min-width:768px) {
@@ -558,7 +567,7 @@ h2 {
     display: -webkit-flex;
     display: flex;
     justify-content: center;
-    padding: 8px;
+    padding: 16px;
 }
 
 .recovered__container,
@@ -1558,7 +1567,7 @@ img {
 @media only screen and (min-width:992px) {
     .specialty {
         padding: 0 20px;
-        width: 20%;
+        width: 16.6%;
     }
 }
 
