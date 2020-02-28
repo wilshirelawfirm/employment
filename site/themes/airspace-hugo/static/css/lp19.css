@@ -531,9 +531,13 @@ ul {
 }
 
 section.capabilities {
-    margin: 1% auto;
+    margin: 2% auto;
 }
-
+@media only screen and (min-width:992px) {
+    section.capabilities {
+        margin: 46px auto 1% auto;
+    }
+}
 section.capabilities h2 {
     display: block;
     margin: auto;
