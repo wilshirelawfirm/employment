@@ -422,6 +422,7 @@ h2 {
 
 .subhero__no-win-desktop picture{
     min-width: 50px;
+    max-width: 100px;
 }
 .subhero__no-win-desktop-no-win-text {
     line-height: 1;
