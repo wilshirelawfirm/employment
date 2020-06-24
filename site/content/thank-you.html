@@ -3,6 +3,9 @@ title: "Thank You"
 date: 2020-01-21T13:21:20-08:00
 draft: false
 ---
+<link rel="stylesheet" href="/css/bootstrap.min.css">
+<link rel="stylesheet" href="/css/landing-page-2019.min.css">
+<link rel="stylesheet" href="/css/lp19.min.css">
 <style>
     .video-container {
         margin-bottom: 5vw;
@@ -31,3 +34,18 @@ draft: false
         <iframe width="560" height="315" src="https://www.youtube.com/embed/y-1uVgoUE1g" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>    </div>
 
 </div>
+<script src="/js/jquery-3.4.1.slim.min.js"></script>
+<script src="/js/lazysizes.min.js"></script>
+<script src="/js/bigtext.min.js"></script>
+
+<script>
+    $(window).on('load', function () {
+        $(".big_text1").bigtext();
+        $(".big_text3").bigtext();
+        $(".big_text4").bigtext();
+        $(".big_text5").bigtext();
+        $(".header__wrap .subhero__phone-num").bigtext();
+        $(".section-header-right").css('visibility', 'visible');
+
+    });
+</script>
