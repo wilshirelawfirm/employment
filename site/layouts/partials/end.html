@@ -146,3 +146,9 @@ https://io.clickguard.com/n/cHJvdGVjdG9y/je8TmfGv
 <!--        var fs = n.getElementsByTagName('script')[0]; fs.parentNode.insertBefore(s, fs);-->
 <!--    })(window, document, 'solutions.invocacdn.com/js/invoca-latest.min.js', '1695/0270988258');-->
 <!--</script>-->
+<script>
+    window.addEventListener('load', function(){
+        var gclid = JSON.parse(localStorage.getItem("gclid")).value;
+        jQuery('[name="gclid_field"]').attr('value', gclid)
+    });
+</script>
