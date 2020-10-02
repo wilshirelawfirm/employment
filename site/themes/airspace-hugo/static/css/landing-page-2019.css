@@ -999,7 +999,8 @@ div.ginput_complex.ginput_container.gf_name_has_2 span {
     font-size: 18px
 }
 .bottom-form h3{
-    line-height: 0.7;
+    line-height: 0.2;
+    font-size: 1rem;
     margin-bottom: 1.3rem;
 }
 @media only screen and (min-width:992px) {
