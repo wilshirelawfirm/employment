@@ -13,21 +13,21 @@
 @font-face {
     font-family: 'Open Sans';
     src: url('../fonts/OpenSans-Regular.ttf');
-    url('../fonts/OpenSans-Regular.ttf') format('truetype'), font-weight: normal;
+url('../fonts/OpenSans-Regular.ttf') format('truetype'), font-weight: normal;
     font-style: normal;
     font-weight: 400;
 }
 @font-face {
     font-family: 'Open Sans';
     src: url('../fonts/OpenSans-SemiBold.ttf');
-    url('../fonts/OpenSans-SemiBold.ttf') format('truetype'), font-weight: '600';
+url('../fonts/OpenSans-SemiBold.ttf') format('truetype'), font-weight: '600';
     font-style: normal;
     font-weight: 600;
 }
 @font-face {
     font-family: 'Open Sans';
     src: url('../fonts/OpenSans-Bold.ttf');
-    url('../fonts/OpenSans-Bold.ttf') format('truetype'), font-weight: '700';
+url('../fonts/OpenSans-Bold.ttf') format('truetype'), font-weight: '700';
     font-style: normal;
     font-weight: 700;
 }
@@ -877,8 +877,8 @@ a.nav-link {
 
 
 .wlf-form ul {
-    list-style: none;
-    padding: 0
+    /*list-style: none;*/
+    /*padding: 0*/
 }
 
 .wlf-form ul label {
@@ -1594,7 +1594,7 @@ img {
 
 @media only screen and (min-width:992px) {
     .specialty {
-        padding: 0 20px;
+        padding: 0;
         width: 16.6%;
     }
 }
@@ -1766,3 +1766,4 @@ img {
     height: 100%;
 }
 form label {display:none;}
+
