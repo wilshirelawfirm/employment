@@ -13,21 +13,21 @@
 @font-face {
     font-family: 'Open Sans';
     src: url('../fonts/OpenSans-Regular.ttf');
-    url('../fonts/OpenSans-Regular.ttf') format('truetype'), font-weight: normal;
+url('../fonts/OpenSans-Regular.ttf') format('truetype'), font-weight: normal;
     font-style: normal;
     font-weight: 400;
 }
 @font-face {
     font-family: 'Open Sans';
     src: url('../fonts/OpenSans-SemiBold.ttf');
-    url('../fonts/OpenSans-SemiBold.ttf') format('truetype'), font-weight: '600';
+url('../fonts/OpenSans-SemiBold.ttf') format('truetype'), font-weight: '600';
     font-style: normal;
     font-weight: 600;
 }
 @font-face {
     font-family: 'Open Sans';
     src: url('../fonts/OpenSans-Bold.ttf');
-    url('../fonts/OpenSans-Bold.ttf') format('truetype'), font-weight: '700';
+url('../fonts/OpenSans-Bold.ttf') format('truetype'), font-weight: '700';
     font-style: normal;
     font-weight: 700;
 }
@@ -877,8 +877,8 @@ a.nav-link {
 
 
 .wlf-form ul {
-    list-style: none;
-    padding: 0
+    /*list-style: none;*/
+    /*padding: 0*/
 }
 
 .wlf-form ul label {
@@ -999,7 +999,8 @@ div.ginput_complex.ginput_container.gf_name_has_2 span {
     font-size: 18px
 }
 .bottom-form h3{
-    line-height: 0.7;
+    line-height: 0.2;
+    font-size: 1rem;
     margin-bottom: 1.3rem;
 }
 @media only screen and (min-width:992px) {
@@ -1024,6 +1025,8 @@ div.ginput_complex.ginput_container.gf_name_has_2 span {
         height: 38px;
         padding: 12px;
     }
+    .footer .footer__address {font-size: 14px;}
+    .footer .footer__copyright {font-size: 14px;}
     .wlf-form input[type=text]{
         padding: 0 0 0 12px;
     }
@@ -1591,7 +1594,7 @@ img {
 
 @media only screen and (min-width:992px) {
     .specialty {
-        padding: 0 20px;
+        padding: 0;
         width: 16.6%;
     }
 }
@@ -1763,3 +1766,4 @@ img {
     height: 100%;
 }
 form label {display:none;}
+
