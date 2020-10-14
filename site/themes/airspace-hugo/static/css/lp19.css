@@ -9,7 +9,7 @@ body {
     margin: 0 auto;
     width: 100%
 }
-p{
+p, li{
     color: #414042;
     font-size: 14px;
 }
@@ -510,10 +510,6 @@ div.cta-form span {
     height: 60px;
     margin: auto;
     width: 320px
-}
-
-ul {
-    padding-inline-start: 0 !important
 }
 
 #error,
@@ -1433,3 +1429,4 @@ section.copyright {
         letter-spacing: 7px
     }
 }
+
