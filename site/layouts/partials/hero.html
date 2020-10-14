@@ -1,114 +1,66 @@
-<div class="standard hero-wrap d-sm-block d-md-block d-lg-none">
-    <div class="container-fluid u-remove-all-padding">
-        <section class="hero">
-            <div class="hero__left">
-                <div class="hero__headline mobile-column-wrap">
-                    <h1 class="d-sm-block d-md-block">
-                        <div class="headline__big-text font-weight-bold big_text1">
-                            <span>YOU DON'T PAY</span>
-                            <span>UNLESS YOU WIN</span>
-                        </div>
-                    </h1>
-                    <h2 class="d-sm-block d-md-block d-lg-none big_text2 font-weight-regular text-center">
-                        <span>Award-winning Disability <br> Discrimination Lawyers</span>
-                    </h2>
-                </div>
-                <div class="standard hero__attorneys">
-                    <div class="d-sm-block d-md-block d-lg-none">
-
-                    </div>
-                </div>
-            </div>
-        </section>
-    </div>
-</div>
-<div class="desktop hero-wrap d-none d-lg-block">
-    <div class="container-fluid tablet">
-        <section class="hero">
-            <div class="hero__headline">
-                <div style="height: 100%;display: flex;flex-direction: column;justify-content: center;">
-                    <div class="d-flex" style="flex-direction: column;height: 80%; justify-content: space-evenly;">
-                        <h1>
-                            <div class="headline__big-text font-weight-bold big_text1">
-                                <span>YOU DON'T PAY</span>
-                                <span>UNLESS YOU WIN</span>
-                            </div>
-                        </h1>
-                        <h2 class="">
-                            <div class="headline__big-text2 font-weight-regular">
-                                <div>Award-Winning Disability <br>Discrimination Lawyers</div>
-                            </div>
-                        </h2>
-                        <picture class="superlawyers">
-                            <source data-srcset="{{ .Site.BaseURL }}img/super-lawyers-desktop.webp" type="image/webp" class="img-fluid">
-                            <source data-srcset="{{ .Site.BaseURL }}img/super-lawyers-desktop.png" type="image/png" class="img-fluid">
-                            <img data-src="{{ .Site.BaseURL }}img/super-lawyers-desktop.png" src="" class="img-fluid lazyload" alt="Super Lawyers">
-                        </picture>
-                    </div>
-                </div>
-
-            </div>
-<!--            <img data-src="{{ .Site.BaseURL }}img/attorneys-desktop.png" src="" class="img-fluid lazyload attorneys" alt="Group of Attorneys">-->
-
-            <picture class="attorneys d-flex justify-content-end">
-                <source data-srcset="{{ .Site.BaseURL }}img/attorneys-desktop.webp" type="image/webp" class="img-fluid">
-                <source data-srcset="{{ .Site.BaseURL }}img/attorneys-desktop.png" type="image/png" class="img-fluid">
-                <img data-src="{{ .Site.BaseURL }}img/attorneys-desktop.png" src="" class="img-fluid lazyload" alt="Group of Attorneys">
+<div class="herolower__wrap d-md-block d-lg-none">
+    <div class="herolower mobile-column-wrap">
+        <div class="herolower__leftblock ">
+            <picture>
+                <source data-srcset="{{ .Site.BaseURL }}img/super-lawyers.webp" type="image/webp" class="img-fluid">
+                <source data-srcset="{{ .Site.BaseURL }}img/super-lawyers.jpg" type="image/jpg" class="img-fluid">
+                <img data-src="{{ .Site.BaseURL }}img/super-lawyers.jpg" src="" class="img-fluid lazyload" alt="Super Lawyers">
             </picture>
-
-            <div class="wlf-form d-lg-flex" id="wlf-form">
-                <div class="wlf-form__container">
-                    <div class="hero__form-title text-left">FREE CONSULTATION 24/7</div>
-                    <div class="wlf-form__container">
-                        <noscript>PLEASE ENABLE JAVASCRIPT IN YOUR BROWSER TO SEE THE FORM</noscript>
-                        <form name="LP19_Top_Form" class="d-none" method="POST" data-netlify="true" action="/thank-you/"
-                              id="LP19_Top_Form" netlify-honeypot="honeypot-bot-field" novalidate>
-                            <div class="form-group d-none">
-                                <label>Don’t fill this out if you're human: <input name="honeypot-bot-field"/></label>
-                            </div>
-                            <div class="form-group">
-                                <label for="firstName" class="control-label">First Name</label>
-                                <input name="firstName" class="form-control" id="firstName" placeholder="First Name"
-                                       aria-label="Enter Your First Name">
-                                <div class="messages"></div>
-                            </div>
-                            <div class="form-group">
-                                <label for="lastName" class="control-label">Last Name</label>
-                                <input name="lastName" class="form-control" id="lastName" placeholder="Last Name"
-                                       aria-label="Enter Your Last Name">
-                                <div class="messages"></div>
-                            </div>
-                            <div class="form-group">
-                                <label for="phone" class="control-label">Phone Number</label>
-                                <input name="phone" id="phone" type="tel" class="form-control bfh-phone"
-                                       data-country="US" placeholder="Phone Number"
-                                       aria-label="Enter Your Phone Number">
-                                <div class="messages"></div>
-                            </div>
-                            <div class="form-group">
-                                <label for="email" class="control-label">Email Address</label>
-                                <input name="email" type="email" class="form-control" id="email"
-                                       placeholder="Email Address" aria-label="Enter Your Email Address">
-                                <div class="messages"></div>
-                            </div>
-                            <div class="form-group">
-                                <input name="websource" id="websource" value="SEM - Google Ads" type="hidden">
-                                <div class="messages"></div>
-                            </div>
-                            <div class="form-group">
-                                <input name="pageurl" id="pageurl" type="hidden" value="pageurl"/>
-                                <input name="branchname" id="branchname" type="hidden" value="lp19short">
-                                <div class="messages"></div>
-                            </div>
-                            <div class="form-group">
-                                <input type="hidden" id="gclid_field" name="gclid_field" value="">
-                                <input name="btnSubmit" id="btnSubmitTop" type="submit" value="GET HELP NOW">
-                                <div class="messages"></div>
-                            </div>
-                        </form>
-                            <p style="font-size: 8px; line-height: 1.25;color: #3c4d66;margin-bottom: 0;">By submitting this form, you agree to receive calls at any time, including hours outside of business hours. This is so that we may reach you as soon as possible in order to consult on your potential case.</p>
-                    </div>
-                </div>
-        </section>
+            <div class="herolower__text font-weight-bold">
+                <span>GET THE JUSTICE</span><span>YOU DESERVE</span>
+            </div>
+        </div>
+        <div class="herolower__rightblock">
+            <picture>
+                <source data-srcset="{{ .Site.BaseURL }}img/bestlawfirms-2020.webp" type="image/webp" class="img-fluid">
+                <source data-srcset="{{ .Site.BaseURL }}img/bestlawfirms-2020.jpg" type="image/jpg" class="img-fluid">
+                <img data-src="{{ .Site.BaseURL }}img/bestlawfirms-2020.jpg" src="" class="img-fluid lazyload" alt="Best Lawyers Best Law Firms U.S. News and World Report 2020">
+            </picture>
+        </div>
     </div>
 </div>
+<div class="subhero__wrap d-none d-lg-block desktop">
+    <div class="container-fluid u-remove-all-padding">
+        <div class="subhero">
+            <div class="subhero__as-seen-on">
+                <span>Recognized in</span>
+                <div class="subhero__as-seen-on-icons images-in-a-row">
+
+                    <div class="icon-latimes"></div>
+                    <div class="icon-ktla5"></div>
+                    <div class="icon-abc-black"></div>
+                    <div class="icon-cnbc"></div>
+                    <div class="icon-fox"></div>
+
+                </div>
+            </div>
+            <div class="subhero__border"></div>
+
+            <div class="subhero__no-win-desktop d-none d-md-flex">
+                <div class="subhero__no-win-desktop-no-win-text"><span>GET THE JUSTICE</span><span>YOU DESERVE</span>
+                </div>
+
+                <picture>
+                    <source data-srcset="{{ .Site.BaseURL }}img/bestlawfirms-2020.webp" type="image/webp" class="subhero__image-zero-fee img-fluid lazyload">
+                    <source data-srcset="{{ .Site.BaseURL }}img/bestlawfirms-2020.jpg" type="image/jpg" class="subhero__image-zero-fee img-fluid lazyload">
+                    <img data-srcset="{{ .Site.BaseURL }}img/bestlawfirms-2020.jpg" data-src="{{ .Site.BaseURL }}img/bestlawfirms-2020.jpg" class="subhero__image-zero-fee img-fluid lazyload">
+                </picture>
+
+            </div>
+            <div class="subhero__border"></div>
+            <div class="subhero__recovered-desktop d-none d-md-block d-lg-none">
+                <span class="subhero__recovered-text1" style="display: block">
+                    <span class="subhero__recovered--break">MORE THAN</span><span class="subhero__recovered--break">$750M</span>
+                    <span>RECOVERED</span> <span class="subhero__recovered--break">FOR OUR CLIENTS</span>
+                </span>
+            </div>
+            <div class="subhero__recovered-desktop d-none d-md-none d-lg-block">
+                <span class="subhero__recovered-text1" style="display: block">
+                    <span>MORE THAN $750M</span>
+                    <span>RECOVERED FOR OUR CLIENTS</span>
+                </span>
+            </div>
+        </div>
+    </div>
+</div>
+
