@@ -2,8 +2,13 @@
 <div id="mobile-pop-container">
     <div class="visible-xs visible-sm">
         <div class="mobile-call-pop text-center">
-            <a class="mobile-call-btn capPhone" href="tel:18337720583"
-               onclick="dataLayer.push({'event':'Contact', 'eventAction':'Call', 'eventNumber': 'Mobile Footer - 1.833.772.0583'});">
+            <a class="mobile-call-btn capPhone" href="tel:{{ .Site.Params.phoneNumDigitsOnly }}"
+               onclick="dataLayer.push(
+                   {
+                   'event':'Contact',
+                    'eventAction':'Call',
+                     'eventNumber': 'Mobile Footer - {{ .Site.Params.phoneNumDigitsOnly }}'
+                   });">
                 <i class="icon-tap2call"></i> <span class="tap-to-call-text">TAP TO CALL NOW</span>
             </a>
             <!--<span class="available white">AVAILABLE NOW</span>-->
@@ -110,34 +115,34 @@ https://io.clickguard.com/n/cHJvdGVjdG9y/je8TmfGv
 
 <!-- begin ClickGUARD Conversion Code -->
 <script type="text/javascript">
-  jQuery(document).ready(function ($) {
-    $(function () {
-      $('.subhero__phone-num').on('click', function () {
-        cg_convert('Header phone number');
-      });
-    });
-    $(function () {
-      $('.hero .gform_button').on('click', function () {
-        cg_convert('Hero Form');
-      });
-    });
-    $(function () {
-      $('.gform_footer .gform_button').on('click', function () {
-        cg_convert('Footer Form');
-      });
-    });
-    $(function () {
-      $('.ccl-slider-bubble').on('click', function () {
-        cg_convert('Client chat live');
-      });
-    });
-    $(function () {
-      $('.mobile-call-btn').on('click', function () {
-        cg_convert('Tap to call');
-      });
-    });
+    jQuery(document).ready(function ($) {
+        $(function () {
+            $('.subhero__phone-num').on('click', function () {
+                cg_convert('Header phone number');
+            });
+        });
+        $(function () {
+            $('.hero .gform_button').on('click', function () {
+                cg_convert('Hero Form');
+            });
+        });
+        $(function () {
+            $('.gform_footer .gform_button').on('click', function () {
+                cg_convert('Footer Form');
+            });
+        });
+        $(function () {
+            $('.ccl-slider-bubble').on('click', function () {
+                cg_convert('Client chat live');
+            });
+        });
+        $(function () {
+            $('.mobile-call-btn').on('click', function () {
+                cg_convert('Tap to call');
+            });
+        });
 
-  });
+    });
 </script>
 <!-- end ClickGUARD Conversion Code -->
 <!--<script>-->
@@ -146,3 +151,11 @@ https://io.clickguard.com/n/cHJvdGVjdG9y/je8TmfGv
 <!--        var fs = n.getElementsByTagName('script')[0]; fs.parentNode.insertBefore(s, fs);-->
 <!--    })(window, document, 'solutions.invocacdn.com/js/invoca-latest.min.js', '1695/0270988258');-->
 <!--</script>-->
+
+<script>
+    window.addEventListener('load', function(){
+        var gclid = JSON.parse(localStorage.getItem("gclid")).value;
+        jQuery('[name="gclid_field"]').attr('value', gclid)
+    });
+</script>
+
