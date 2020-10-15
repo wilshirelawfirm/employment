@@ -5,8 +5,14 @@ theme = "airspace-hugo"
 
 # The site's parameters
 [params]
-  home = "Home"
+  # This number must start with a 1 and contain digits only
+  phoneNumDigitsOnly = "18449034045"
 
+  # Hidden phone number included in footer as provided by PPC
+  # This number will not necessarily match phoneNumDigitsOnly, nor will its formatting
+  phoneNumHidden = "(888) 979-1278"
+
+  home = "Home"
   [menu]
 
     [[menu.header]]
