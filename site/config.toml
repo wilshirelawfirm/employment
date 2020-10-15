@@ -6,7 +6,7 @@ theme = "airspace-hugo"
 # The site's parameters
 [params]
   # This number must start with a 1 and contain digits only
-  phoneNumDigitsOnly = "18553780629"
+  phoneNumDigitsOnly = "18556011271"
 
   # Hidden phone number included in footer as provided by PPC
   # This number will not necessarily match phoneNumDigitsOnly, nor will its formatting
