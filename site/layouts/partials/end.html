@@ -2,8 +2,13 @@
 <div id="mobile-pop-container">
     <div class="visible-xs visible-sm">
         <div class="mobile-call-pop text-center">
-            <a class="mobile-call-btn capPhone" href="tel:8553350244"
-               onclick="dataLayer.push({'event':'Contact', 'eventAction':'Call', 'eventNumber': 'Mobile Footer - 8553350244'});">
+            <a class="mobile-call-btn capPhone" href="tel:{{ .Site.Params.phoneNumDigitsOnly }}"
+               onclick="dataLayer.push(
+                   {
+                   'event':'Contact',
+                    'eventAction':'Call',
+                     'eventNumber': 'Mobile Footer - {{ .Site.Params.phoneNumDigitsOnly }}'
+                   });">
                 <i class="icon-tap2call"></i> <span class="tap-to-call-text">TAP TO CALL NOW</span>
             </a>
             <!--<span class="available white">AVAILABLE NOW</span>-->
