@@ -517,3 +517,20 @@ gtag('config', 'AW-663715077');
 </style>
 
 
+<!-- Event snippet for EMP - Lead Form Submission conversion page -->
+
+<!-- Global site tag (gtag.js) - Google Ads: 663715077 -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=AW-663715077"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'AW-663715077');
+</script>
+
+<script>
+    if(document.URL.indexOf("thank-you") >= 0){
+        gtag('event', 'conversion', {'send_to': 'AW-663715077/ITuRCI-JyOYBEIX6vbwC'});
+        console.log ('Fired gtag')
+    }
+</script>
