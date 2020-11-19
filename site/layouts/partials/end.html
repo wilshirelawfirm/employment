@@ -19,21 +19,53 @@
 
 <script src="{{ .Site.BaseURL }}js/jquery-3.4.1.slim.min.js"></script>
 <script async src="{{ .Site.BaseURL }}js/lazysizes.min.js"></script>
+
+<!--begin phone number formatting script-->
+<script>
+    var phoneNum = "{{ .Site.Params.phoneNumDigitsOnly }}"
+    function strlength(a){
+        if (a.length !== 11){
+            console.log("phone number invalid")
+            return  false
+        } else {
+            return true
+        }
+    }
+    function formatPhone(b){
+        if(strlength(b)){
+            var part1 = phoneNum.slice(0, 1) + "-";
+            var part2 = phoneNum.slice(1,4) + "-";
+            var part3 = phoneNum.slice(4,7) + "-";
+            var part4 = phoneNum.slice(7,11);
+            var formattedNumber = part1 + part2 + part3 + part4;
+            return formattedNumber
+        }
+    }
+    window.addEventListener("load", function(event) {
+        var phoneFormatted = formatPhone(phoneNum);
+
+        var spans = document.getElementsByClassName( "phoneNumberFormatted" );
+        for (var i = 0; i < spans.length; i++) {
+            spans[i].innerHTML = phoneFormatted;
+        }
+    });
+</script>
+
 <link async rel="stylesheet" href="{{ .Site.BaseURL }}css/bootstrap.min.css">
 
-<link rel="stylesheet" href="{{ .Site.BaseURL }}css/landing-page-2019.min.css">
-<link rel="stylesheet" href="/css/bootstrap-formhelpers.min.css">
-<link rel="stylesheet" href="{{ .Site.BaseURL }}css/lp19.min.css">
+<link async rel="stylesheet" href="{{ .Site.BaseURL }}css/landing-page-2019.min.css">
+<link async rel="stylesheet" href="/css/bootstrap-formhelpers.min.css">
+<link async rel="stylesheet" href="{{ .Site.BaseURL }}css/lp19.min.css">
 
-<script src="{{ .Site.BaseURL }}js/bootstrap.bundle.min.js"></script>
-<script src="{{ .Site.BaseURL }}js/bigtext.min.js"></script>
+<script async src="{{ .Site.BaseURL }}js/bootstrap.bundle.min.js"></script>
+<script async src="{{ .Site.BaseURL }}js/bigtext.min.js"></script>
 
-<link rel="stylesheet" href="{{ .Site.BaseURL }}css/bootstrap-formhelpers.min.css">
+<link async rel="stylesheet" href="{{ .Site.BaseURL }}css/bootstrap-formhelpers.min.css">
 
-<script src="{{ .Site.BaseURL }}js/bootstrap-formhelpers.min.js"></script>
-<script src="{{ .Site.BaseURL }}js/validate.min.js"></script>
-<script src="{{ .Site.BaseURL }}js/underscore-min.js"></script>
-<script src="{{ .Site.BaseURL }}js/modernizr-custom.js"></script>
+<script async src="{{ .Site.BaseURL }}js/bootstrap-formhelpers.min.js"></script>
+<script async src="{{ .Site.BaseURL }}js/validate.min.js"></script>
+<script async src="{{ .Site.BaseURL }}js/underscore-min.js"></script>
+<script async src="{{ .Site.BaseURL }}js/modernizr-custom.js"></script>
 
 <script>
     $(window).on('load', function () {
