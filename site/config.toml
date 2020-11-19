@@ -1,4 +1,4 @@
-title = "Best Wrongful Termination Lawyers in California | Wilshire Law Firm"
+title = "Best Wrongful Termination Lawyers in California | www.wrongfulterminationsocal.com"
 baseURL = "/"
 languageCode = "en-us"
 theme = "airspace-hugo"
@@ -6,7 +6,7 @@ theme = "airspace-hugo"
 # The site's parameters
 [params]
   # This number must start with a 1 and contain digits only
-  phoneNumDigitsOnly = "8446011314"
+  phoneNumDigitsOnly = "18446011314"
 
   # Hidden phone number included in footer as provided by PPC
   # This number will not necessarily match phoneNumDigitsOnly, nor will its formatting
