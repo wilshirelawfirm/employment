@@ -43,9 +43,9 @@
     }
     function formatPhone(b){
         if(strlength(b)){
-            var part1 = phoneNum.slice(0, 1) + ".";
-            var part2 = phoneNum.slice(1,4) + ".";
-            var part3 = phoneNum.slice(4,7) + ".";
+            var part1 = phoneNum.slice(0, 1) + "-";
+            var part2 = phoneNum.slice(1,4) + "-";
+            var part3 = phoneNum.slice(4,7) + "-";
             var part4 = phoneNum.slice(7,11);
             var formattedNumber = part1 + part2 + part3 + part4;
             return formattedNumber
